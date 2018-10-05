@@ -1,5 +1,6 @@
 .header {
   position: relative;
+  height: 15vw;
 }
 
 .title-img {
@@ -29,12 +30,17 @@
 }
 
 @media only screen and (max-width: 425px) {
+  .header {
+    height: 300px;
+    z-index: 10;
+  }
+
   .title-img {
     width: 350px;
   }
 
   .logo-container {
-    top: 130px;
+    top: 150px;
   }
 
   .logo-text {
@@ -53,6 +59,10 @@
 }
 
 @media only screen and (max-width: 350px) {
+  .header {
+    height: 330px;
+  }
+
   .title-img {
     margin-left: -40px;
   }

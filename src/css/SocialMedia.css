@@ -1,0 +1,34 @@
+.sm {
+  position: relative;
+  background: url("../images/sm-back.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  height: 20vw;
+}
+
+.sm-btn {
+  height: 4.5vw;
+  position: absolute;
+  top: 9vw;
+  right: 0;
+  margin-right: 7vw;
+  cursor: pointer;
+}
+
+.sm-btn:hover {
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 425px) {
+  .sm {
+    height: 200px;
+    text-align: center;
+  }
+
+  .sm-btn {
+    position: relative;
+    height: 50px;
+    margin: 50px 10px 0px 10px !important;
+  }
+}
