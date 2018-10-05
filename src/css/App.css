@@ -1,3 +1,9 @@
 .container {
   position: relative;
 }
+
+.bottleBtnContainer {
+  text-align: center;
+  height: 310px;
+  overflow: hidden;
+}
