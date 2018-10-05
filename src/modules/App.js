@@ -5,6 +5,7 @@ import Header from "./Header";
 import Video from "./Video";
 import SocialMedia from "./SocialMedia";
 import BottleBtn from "./BottleBtn";
+import Form from "./Form";
 
 import leftBottle from "../images/left-bottle.png";
 import rightBottle from "../images/right-bottle.png";
@@ -37,6 +38,7 @@ class App extends Component {
             right
           />
         </div>
+        {openForm && <Form type={openForm} />}
       </div>
     );
   }
