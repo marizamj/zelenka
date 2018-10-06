@@ -5,6 +5,7 @@
   background-size: contain;
   background-position: right;
   height: 19vw;
+  margin-left: 70%;
 }
 
 .sm-btn {
@@ -22,8 +23,10 @@
 
 @media only screen and (max-width: 425px) {
   .sm {
-    height: 160px;
+    height: 180px;
     text-align: center;
+    margin-top: -20px;
+    margin-left: 0;
   }
 
   .sm-btn {
