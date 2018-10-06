@@ -8,10 +8,10 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
-        <img src={title_img} className="title-img" />
+        <img src={title_img} className="title-img" alt="background" />
         <div className="logo-container">
           <p className="logo-text">Программа о хирургии и медицине</p>
-          <img src={logo} className="logo" />
+          <img src={logo} className="logo" alt="ЗЕЛЕНКА" />
           <p className="logo-text">Показываем так, чтобы не тошнило</p>
         </div>
       </div>

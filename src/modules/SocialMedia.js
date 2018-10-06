@@ -9,13 +9,19 @@ class SocialMedia extends Component {
   render() {
     return (
       <div className="sm">
-        <img src={youtube} className="sm-btn" style={{ marginRight: "17vw" }} />
+        <img
+          src={youtube}
+          alt="YouTube"
+          className="sm-btn"
+          style={{ marginRight: "17vw" }}
+        />
         <img
           src={instagram}
+          alt="Instagram"
           className="sm-btn"
           style={{ marginRight: "12vw" }}
         />
-        <img src={facebook} className="sm-btn" />
+        <img src={facebook} alt="Facebook" className="sm-btn" />
       </div>
     );
   }

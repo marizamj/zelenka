@@ -29,16 +29,18 @@ class App extends Component {
             onClick={() => this.toggleForm("partners")}
             image={leftBottle}
             up={openForm !== "partners"}
+            alt="Партнерам"
             left
           />
           <BottleBtn
             onClick={() => this.toggleForm("friends")}
             image={rightBottle}
             up={openForm !== "friends"}
+            alt="Друзьям"
             right
           />
         </div>
-        <Collapse isOpened={openForm}>
+        <Collapse isOpened={typeof openForm === "string"}>
           <Form type={openForm} />
         </Collapse>
         <Video />
