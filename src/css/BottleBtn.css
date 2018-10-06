@@ -27,3 +27,14 @@
   transform: rotate(90deg);
   transform-origin: bottom right;
 }
+
+@media only screen and (max-width: 425px) {
+  .bottleBtn {
+    height: 30vw;
+    margin: 10px 10px 30px 10px;
+  }
+
+  .bottleBtn img {
+    height: 30vw;
+  }
+}
