@@ -23,7 +23,6 @@ class App extends Component {
       <div className="container">
         <Header />
         <SocialMedia />
-        <Video />
         <div className="bottleBtnContainer">
           <BottleBtn
             onClick={() => this.toggleForm("partners")}
@@ -39,6 +38,7 @@ class App extends Component {
           />
         </div>
         {openForm && <Form type={openForm} />}
+        <Video />
       </div>
     );
   }

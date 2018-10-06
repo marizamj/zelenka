@@ -11,7 +11,11 @@ class BottleBtn extends Component {
 
     return (
       <div className="bottleBtn" onClick={onClick}>
-        <img src={image} className={up ? "bottleImgUp" : downClass} />
+        <img
+          src={image}
+          className={up ? "bottleImgUp" : downClass}
+          style={{ transformOrigin: `bottom ${left ? "left" : "right"}` }}
+        />
       </div>
     );
   }

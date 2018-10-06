@@ -6,19 +6,19 @@
 }
 
 .bottleImgUp {
-  height: 520px;
   transition: transform 0.5s ease;
 }
 
 .bottleImgDown {
-  height: 520px;
   transition: transform 0.5s ease;
 }
 
 .downLeft {
   transform: rotate(-90deg);
+  transform-origin: bottom left;
 }
 
 .downRight {
   transform: rotate(90deg);
+  transform-origin: bottom right;
 }
