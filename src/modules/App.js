@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Collapse } from "react-collapse";
 import "../css/App.css";
 
 import Header from "./Header";
@@ -37,7 +38,9 @@ class App extends Component {
             right
           />
         </div>
-        {openForm && <Form type={openForm} />}
+        <Collapse isOpened={openForm}>
+          <Form type={openForm} />
+        </Collapse>
         <Video />
       </div>
     );

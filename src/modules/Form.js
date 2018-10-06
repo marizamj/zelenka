@@ -27,7 +27,8 @@ class Form extends Component {
 
   render() {
     const { type } = this.props;
-    return (
+
+    return !type ? null : (
       <div className="form">
         <form>
           <div className="formDescription">{this[type].description}</div>
