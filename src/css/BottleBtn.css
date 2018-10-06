@@ -1,8 +1,13 @@
 .bottleBtn {
-  margin: 50px;
+  margin: 3vw;
   display: inline-block;
   cursor: pointer;
-  height: 260px;
+  height: 16vw;
+}
+
+.bottleBtn img {
+  height: 16vw;
+  max-height: 260px;
 }
 
 .bottleImgUp {
