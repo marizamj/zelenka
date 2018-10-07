@@ -5,36 +5,49 @@
   margin-bottom: 3vw;
 }
 
+.required {
+  font-size: 1.2vw;
+  color: #ba084b;
+  text-align: end;
+}
+
 .formDescription {
   text-align: center;
 }
 
-.form p {
+.formLabel {
   color: dimgrey;
   margin-top: 2vw;
   margin-bottom: 0.5vw;
   font-size: 1.4vw;
 }
 
-.form input {
+.form input,
+.form textarea {
   width: 100%;
-  padding: 1vw;
+  padding: 0.8vw;
   outline: none;
   border: 1px solid lightgrey;
   border-radius: 3px;
   font-size: 1.6vw;
 }
 
-.form input:focus {
+.form textarea {
+  height: 6vw;
+  resize: none;
+}
+
+.form input:focus,
+.form textarea:focus {
   border: 1px solid grey;
 }
 
+.form input[type="submit"],
 .formSubmit {
   cursor: pointer;
   color: dimgrey;
   font-size: 1.6vw;
   width: 12vw;
-  height: 3vw;
   border: 1px solid lightgrey;
   border-radius: 3px;
   text-align: center;
@@ -53,13 +66,14 @@
     font-size: 17px;
   }
 
-  .form p,
+  .formLabel,
   .form input,
+  .form textarea,
   .formSubmit {
     font-size: 17px;
   }
 
-  .form p {
+  .formLabel {
     margin-top: 20px;
     margin-bottom: 10px;
   }
