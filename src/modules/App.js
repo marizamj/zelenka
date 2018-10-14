@@ -7,6 +7,7 @@ import Video from "./Video";
 import SocialMedia from "./SocialMedia";
 import BottleBtn from "./BottleBtn";
 import Form from "./Form";
+import Partners from "./Partners";
 
 import leftBottle from "../images/left-bottle.png";
 import rightBottle from "../images/right-bottle.png";
@@ -44,6 +45,7 @@ class App extends Component {
           <Form type={openForm} />
         </Collapse>
         <Video />
+        <Partners />
       </div>
     );
   }
