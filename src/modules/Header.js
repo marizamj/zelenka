@@ -10,9 +10,10 @@ class Header extends Component {
       <div className="header">
         <img src={title_img} className="title-img" alt="background" />
         <div className="logo-container">
-          <p className="logo-text">Программа о хирургии и медицине</p>
           <img src={logo} className="logo" alt="ЗЕЛЕНКА" />
-          <p className="logo-text">Показываем так, чтобы не тошнило</p>
+          <p className="logo-text">
+            Показываем хирургию и медицину так, чтобы не тошнило
+          </p>
         </div>
       </div>
     );
