@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import "../css/Header.css";
 
 import logo from "../images/logo.png";
-import title_img from "../images/title-img.png";
+import topBottle from "../images/top-bottle.png";
 
 class Header extends Component {
   render() {
     return (
       <div className="header">
-        <img src={title_img} className="title-img" alt="background" />
+        <div className="title-img" />
         <div className="logo-container">
           <img src={logo} className="logo" alt="ЗЕЛЕНКА" />
           <p className="logo-text">
