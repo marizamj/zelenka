@@ -1,11 +1,17 @@
 import React, { Component } from "react";
 import "../css/Form.css";
 
+import { HOME_URL, HOME_EMAIL } from "../lib/globals";
+
 class Form extends Component {
+  componentWillReceiveProps(props) {
+    console.log(props);
+  }
+
   setForm = type =>
     type === "partners"
       ? {
-          __html: `<form action="https://mailthis.to/marizamj" method="POST">
+          __html: `<form action="https://formspree.io/${HOME_EMAIL}" method="POST">
       <div class="formDescription">Если вы врач, представитель клиники или любой другой компании, связанной с медициной, мы можем сделать очередной выпуск вместе. Заполните анкету, и мы очень скоро свяжемся с вами.</div>
       <p class="required">* - обязательные поля</p>
       <label>
@@ -36,14 +42,14 @@ class Form extends Component {
         <p class="formLabel">Когда хотите начать?</p>
         <input type="text" name="startDate" />
       </label>
-      <input type="hidden" name="_after" value="http://192.168.2.51:3000/#submitted" />
+      <input type="hidden" name="_next" value="${HOME_URL}form-success" />
       <input type="hidden" name="_subject" value="Новое сообщение с сайта zelenka.online" />
-      <input type="hidden" name="_honeypot" value="" />
+      <input type="text" name="_gotcha" style="display:none" />
       <input type="submit" value="Отправить" />
     </form>`
         }
       : {
-          __html: `<form action="https://mailthis.to/marizamj" method="POST">
+          __html: `<form action="https://formspree.io/${HOME_EMAIL}" method="POST">
       <div class="formDescription">Хотите что-то сказать? Предложить идею или помочь с экспертизой? Стать героем выпуска, поделившись своей историей столкновения с хирургами? Мы внимательно прочтем ваше письмо и ответим, если заинтересуемся.</div>
       <p class="required">* - обязательные поля</p>
       <label>
@@ -70,27 +76,24 @@ class Form extends Component {
         <p class="formLabel">Что нам необходимо улучшить в своей работе?</p>
         <textarea name="recommendations"></textarea>
       </label>
-      <input type="hidden" name="_after" value="http://192.168.2.51:3000/#submitted" />
+      <input type="hidden" name="_next" value="${HOME_URL}form-success" />
       <input type="hidden" name="_subject" value="Новое сообщение с сайта zelenka.online" />
-      <input type="hidden" name="_honeypot" value="" />
+      <input type="text" name="_gotcha" style="display:none" />
       <input type="submit" value="Отправить" />
     </form>`
         };
 
   render() {
-    const { type, thankYouMsg } = this.props;
+    const { location } = this.props;
 
-    return thankYouMsg ? (
+    const type = location.pathname.slice(6);
+
+    return type === "success" ? (
       <div className="thankYouMsg">
         Спасибо! Мы ответим вам в ближайшее время. Соня и Юля
       </div>
     ) : (
-      <div
-        id="submitted"
-        className="form"
-        ref={this.formContainer}
-        dangerouslySetInnerHTML={this.setForm(type)}
-      />
+      <div className="form" dangerouslySetInnerHTML={this.setForm(type)} />
     );
   }
 }
