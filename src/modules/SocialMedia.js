@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../css/SocialMedia.css";
 
 import facebook from "../images/facebook.png";
-import instagram from "../images/instagram.png";
+// import instagram from "../images/instagram.png";
 import youtube from "../images/youtube.png";
 
 class SocialMedia extends Component {

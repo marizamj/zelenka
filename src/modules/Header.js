@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "../css/Header.css";
 
 import logo from "../images/logo.png";
-import topBottle from "../images/top-bottle.png";
 
 class Header extends Component {
   render() {

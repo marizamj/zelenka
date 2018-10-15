@@ -4,10 +4,32 @@ body {
   font-family: "PT Sans", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-width: 300px;
+  min-width: 320px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1,
+h2 {
+  color: #c92121;
+  margin: 100px 0px 50px 0px;
+}
+
+.opacity1 {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.opacity0 {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+@media only screen and (max-width: 1023px) {
+  .opacity0 {
+    opacity: 1;
+  }
 }

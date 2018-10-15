@@ -1,19 +1,20 @@
 .sm {
+  font-size: 2em;
   position: relative;
   background: url("../images/sm-back.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
-  height: 19vw;
-  margin-left: 70%;
+  height: 250px;
+  /* margin-left: 70%; */
 }
 
 .sm-btn {
-  height: 4.5vw;
+  height: 2em;
   position: absolute;
-  top: 9vw;
+  top: 130px;
   right: 0;
-  margin-right: 7vw;
+  margin-right: 3em;
   cursor: pointer;
 }
 
@@ -21,17 +22,19 @@
   opacity: 0.8;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 1023px) {
   .sm {
-    height: 180px;
-    text-align: center;
+    font-size: 1.5em;
+    height: 190px;
+    /* text-align: center; */
     margin-top: -20px;
     margin-left: 0;
   }
 
   .sm-btn {
-    position: relative;
-    height: 50px;
-    margin: 50px 10px 0px 10px !important;
+    /* position: relative; */
+    /* height: 50px; */
+    top: 100px;
+    /* margin: 50px 10px 0px 10px !important; */
   }
 }
