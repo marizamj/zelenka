@@ -18,11 +18,16 @@ class Partners extends Component {
               visibleName === "nlv" ? "opacity1" : "opacity0"
             }`}
           >
-            Клиника лазерной коррекции зрения "Новый взгляд"
+            Клиника лазерной коррекции зрения «Новый взгляд»
           </span>
-          <a href="http://www.nlv.ru/" target="_blank" rel="noopener">
+          <a
+            href="http://www.nlv.ru/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               src={nlv}
+              alt="Клиника лазерной коррекции зрения «Новый взгляд»"
               className="partner-logo"
               onMouseEnter={() => this.setState({ visibleName: "nlv" })}
               onMouseLeave={() => this.setState({ visibleName: null })}
