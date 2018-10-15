@@ -1,22 +1,22 @@
 import React, { Component } from "react";
-import { Collapse } from "react-collapse";
 import "../css/App.css";
 
 import Header from "./Header";
 import Video from "./Video";
 import SocialMedia from "./SocialMedia";
-import BottleBtn from "./BottleBtn";
 import Form from "./Form";
 import Partners from "./Partners";
 
-import leftBottle from "../images/left-bottle.png";
-import rightBottle from "../images/right-bottle.png";
+import btnPartners from "../images/btn-partners.png";
+import btnAll from "../images/btn-all.png";
 
 class App extends Component {
-  state = { openForm: null };
+  state = { openForm: "partners" };
 
-  toggleForm = type =>
-    this.setState({ openForm: this.state.openForm === type ? null : type });
+  toggleForm = type => {
+    window.location.hash = "#";
+    this.setState({ openForm: type });
+  };
 
   render() {
     const { openForm } = this.state;
@@ -25,25 +25,24 @@ class App extends Component {
       <div className="container">
         <Header />
         <SocialMedia />
-        <div className="bottleBtnContainer">
-          <BottleBtn
-            onClick={() => this.toggleForm("partners")}
-            image={leftBottle}
-            up={openForm !== "partners"}
+        <div className="btnContainer">
+          <img
+            src={btnPartners}
             alt="Партнерам"
-            left
+            className="btnImg"
+            onClick={() => this.toggleForm("partners")}
           />
-          <BottleBtn
-            onClick={() => this.toggleForm("friends")}
-            image={rightBottle}
-            up={openForm !== "friends"}
-            alt="Друзьям"
-            right
+          <img
+            src={btnAll}
+            alt="Всем"
+            className="btnImg"
+            onClick={() => this.toggleForm("all")}
           />
         </div>
-        <Collapse isOpened={typeof openForm === "string"}>
-          <Form type={openForm} />
-        </Collapse>
+        <Form
+          type={openForm}
+          thankYouMsg={window.location.hash === "#submitted"}
+        />
         <Video />
         <Partners />
       </div>
