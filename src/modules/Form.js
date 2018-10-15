@@ -2,70 +2,95 @@ import React, { Component } from "react";
 import "../css/Form.css";
 
 class Form extends Component {
-  commonFields = [
-    { label: "Как вас зовут?", name: "name", required: true },
-    {
-      label: "Контактный e-mail",
-      type: "email",
-      name: "email",
-      required: true
-    },
-    { label: "Телефон", type: "tel", name: "phone", required: true }
-  ];
-
-  partners = {
-    description:
-      "Если вы врач, представитель клиники или любой другой компании, связанной с медициной, мы можем сделать очередной выпуск вместе. Заполните анкету, и мы очень скоро свяжемся с вами.",
-    fields: [
-      { label: "Где вы работаете? Не забудьте адрес сайта.", required: true },
-      {
-        label: "О чем вы хотели бы рассказать в Зелёнке?",
-        type: "textarea",
-        required: true
-      },
-      { label: "Сколько денег вы готовы потратить на спонсорский выпуск?" },
-      { label: "Когда хотите начать?" }
-    ]
-  };
-
-  friends = {
-    description:
-      "Хотите что-то сказать? Предложить идею или помочь с экспертизой? Стать героем выпуска, поделившись своей историей столкновения с хирургами? Мы внимательно прочтем ваше письмо и ответим, если заинтересуемся. ",
-    fields: [
-      { label: "Ваша идея/предложение", type: "textarea", required: true },
-      { label: "Чем вам нравится Зелёнка?", type: "textarea" },
-      { label: "Что нам необходимо улучшить в своей работе?", type: "textarea" }
-    ]
-  };
+  setForm = type =>
+    type === "partners"
+      ? {
+          __html: `<form action="https://mailthis.to/marizamj" method="POST">
+      <div class="formDescription">Если вы врач, представитель клиники или любой другой компании, связанной с медициной, мы можем сделать очередной выпуск вместе. Заполните анкету, и мы очень скоро свяжемся с вами.</div>
+      <p class="required">* - обязательные поля</p>
+      <label>
+        <p class="formLabel">Как вас зовут?<span class="required"> *</span></p>
+        <input type="text" name="name" required />
+      </label>
+      <label>
+        <p class="formLabel">Контактный e-mail<span class="required"> *</span></p>
+        <input type="email" name="email" required />
+      </label>
+      <label>
+        <p class="formLabel">Телефон<span class="required"> *</span></p>
+        <input type="tel" name="phone" required />
+      </label>
+      <label>
+        <p class="formLabel">Где вы работаете? Не забудьте адрес сайта.<span class="required"> *</span></p>
+        <input type="text" name="workplace" required />
+      </label>
+      <label>
+        <p class="formLabel">О чем вы хотели бы рассказать в Зелёнке?<span class="required"> *</span></p>
+        <textarea name="message" required></textarea>
+      </label>
+      <label>
+        <p class="formLabel">Сколько денег вы готовы потратить на спонсорский выпуск?</p>
+        <input type="text" name="money" />
+      </label>
+      <label>
+        <p class="formLabel">Когда хотите начать?</p>
+        <input type="text" name="startDate" />
+      </label>
+      <input type="hidden" name="_after" value="http://192.168.2.51:3000/#submitted" />
+      <input type="hidden" name="_subject" value="Новое сообщение с сайта zelenka.online" />
+      <input type="hidden" name="_honeypot" value="" />
+      <input type="submit" value="Отправить" />
+    </form>`
+        }
+      : {
+          __html: `<form action="https://mailthis.to/marizamj" method="POST">
+      <div class="formDescription">Хотите что-то сказать? Предложить идею или помочь с экспертизой? Стать героем выпуска, поделившись своей историей столкновения с хирургами? Мы внимательно прочтем ваше письмо и ответим, если заинтересуемся.</div>
+      <p class="required">* - обязательные поля</p>
+      <label>
+        <p class="formLabel">Как вас зовут?<span class="required"> *</span></p>
+        <input type="text" name="name" required />
+      </label>
+      <label>
+        <p class="formLabel">Контактный e-mail<span class="required"> *</span></p>
+        <input type="email" name="email" required />
+      </label>
+      <label>
+        <p class="formLabel">Телефон<span class="required"> *</span></p>
+        <input type="tel" name="phone" required />
+      </label>
+      <label>
+        <p class="formLabel">Ваша идея/предложение<span class="required"> *</span></p>
+        <textarea name="message" required></textarea>
+      </label>
+      <label>
+        <p class="formLabel">Чем вам нравится Зелёнка?</p>
+        <textarea name="compliments"></textarea>
+      </label>
+      <label>
+        <p class="formLabel">Что нам необходимо улучшить в своей работе?</p>
+        <textarea name="recommendations"></textarea>
+      </label>
+      <input type="hidden" name="_after" value="http://192.168.2.51:3000/#submitted" />
+      <input type="hidden" name="_subject" value="Новое сообщение с сайта zelenka.online" />
+      <input type="hidden" name="_honeypot" value="" />
+      <input type="submit" value="Отправить" />
+    </form>`
+        };
 
   render() {
-    const { type } = this.props;
+    const { type, thankYouMsg } = this.props;
 
-    return !type ? null : (
-      <div className="form">
-        <form>
-          <div className="formDescription">{this[type].description}</div>
-          <p className="required">* - обязательные поля</p>
-          {[...this.commonFields, ...this[type].fields].map(field => (
-            <label key={field.label}>
-              <p className="formLabel">
-                {field.label}
-                {field.required && <span className="required">*</span>}
-              </p>
-              {field.type === "textarea" ? (
-                <textarea required={field.required} name={field.name} />
-              ) : (
-                <input
-                  required={field.required}
-                  type={field.type || "text"}
-                  name={field.name}
-                />
-              )}
-            </label>
-          ))}
-          <input type="submit" value="Отправить" />
-        </form>
+    return thankYouMsg ? (
+      <div className="thankYouMsg">
+        Спасибо! Мы ответим вам в ближайшее время. Соня и Юля
       </div>
+    ) : (
+      <div
+        id="submitted"
+        className="form"
+        ref={this.formContainer}
+        dangerouslySetInnerHTML={this.setForm(type)}
+      />
     );
   }
 }
