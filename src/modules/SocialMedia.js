@@ -9,19 +9,37 @@ class SocialMedia extends Component {
   render() {
     return (
       <div className="sm">
-        <img
-          src={youtube}
-          alt="YouTube"
-          className="sm-btn"
-          style={{ marginRight: "17vw" }}
-        />
-        <img
-          src={instagram}
-          alt="Instagram"
-          className="sm-btn"
-          style={{ marginRight: "12vw" }}
-        />
-        <img src={facebook} alt="Facebook" className="sm-btn" />
+        <a
+          href="https://www.youtube.com/channel/UCIxnXifkJRTPOIe4AQM_fBQ"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={youtube}
+            alt="YouTube"
+            className="sm-btn"
+            style={{ marginRight: "5.5em" }}
+          />
+        </a>
+        {/* <a
+          href="https://www.youtube.com/channel/UCIxnXifkJRTPOIe4AQM_fBQ"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={instagram}
+            alt="Instagram"
+            className="sm-btn"
+            style={{ marginRight: "12vw" }}
+          />
+        </a> */}
+        <a
+          href="https://www.facebook.com/3elenka.online/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={facebook} alt="Facebook" className="sm-btn" />
+        </a>
       </div>
     );
   }
