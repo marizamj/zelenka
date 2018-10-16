@@ -2,7 +2,9 @@
   "name": "zelenka",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://zelenka.online/",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-router-dom": "^4.3.1",
@@ -10,10 +12,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "clean": "rm -rf ./build",
+    "build": "npm run clean && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && surge --domain=zelenka.surge.sh ./build/"
+    "copy-cname": "cp CNAME build",
+    "link": "ln -s ./index.html ./build/404.html",
+    "deploy": "npm run build && npm run copy-cname && npm run link && gh-pages --dist build --branch gh-pages"
   },
   "eslintConfig": {
     "extends": "react-app"
