@@ -6,7 +6,7 @@ import App from "./modules/App";
 import Form from "./modules/Form";
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <div>
       <Route exact path="/" component={App} />
       <Route path="/form-partners" component={Form} />

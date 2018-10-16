@@ -18,7 +18,7 @@ class App extends Component {
 
   toggleForm = type => {
     this.setState({ openForm: type });
-    if (window.location.href === HOME_URL + "#btnContainer") {
+    if (window.location.href === process.env.PUBLIC_URL + "#form") {
       window.location.href = "#";
     }
   };
@@ -34,7 +34,7 @@ class App extends Component {
     } catch (error) {
       console.error(error);
       this.setState({ formIframeHeight: "500px" });
-      window.location.href = "#btnContainer";
+      window.location.href = "#form";
     }
   };
 
@@ -45,17 +45,17 @@ class App extends Component {
       <div className="container">
         <Header />
         <SocialMedia />
-        <div className="btnContainer" id="btnContainer">
+        <div className="btnContainer" id="form">
           <img
             src={btnPartners}
             alt="Партнерам"
-            className="btnImg"
+            className={`btnImg ${openForm === "partners" && "selected"}`}
             onClick={() => this.toggleForm("partners")}
           />
           <img
             src={btnAll}
             alt="Всем"
-            className="btnImg"
+            className={`btnImg ${openForm === "all" && "selected"}`}
             onClick={() => this.toggleForm("all")}
           />
         </div>
@@ -63,7 +63,7 @@ class App extends Component {
           title="formIframe"
           className="formIframe"
           ref={this.formIframe}
-          src={`/form-${openForm}`}
+          src={`${HOME_URL}/form-${openForm}`}
           style={{ height: this.state.formIframeHeight }}
           onLoad={this.setFormIframeHeight}
         />

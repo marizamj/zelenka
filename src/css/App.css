@@ -14,6 +14,9 @@
   margin: 20px;
 }
 
+.selected {
+}
+
 .formIframe {
   width: 100%;
   border: none;
