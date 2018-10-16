@@ -4,10 +4,6 @@ import "../css/Form.css";
 import { HOME_URL, HOME_EMAIL } from "../lib/globals";
 
 class Form extends Component {
-  componentWillReceiveProps(props) {
-    console.log(props);
-  }
-
   setForm = type =>
     type === "partners"
       ? {
@@ -42,7 +38,7 @@ class Form extends Component {
         <p class="formLabel">Когда хотите начать?</p>
         <input type="text" name="startDate" />
       </label>
-      <input type="hidden" name="_next" value="${HOME_URL}form-success" />
+      <input type="hidden" name="_next" value="${HOME_URL}/form-success" />
       <input type="hidden" name="_subject" value="Новое сообщение с сайта zelenka.online" />
       <input type="text" name="_gotcha" style="display:none" />
       <input type="submit" value="Отправить" />
@@ -76,7 +72,7 @@ class Form extends Component {
         <p class="formLabel">Что нам необходимо улучшить в своей работе?</p>
         <textarea name="recommendations"></textarea>
       </label>
-      <input type="hidden" name="_next" value="${HOME_URL}form-success" />
+      <input type="hidden" name="_next" value="${HOME_URL}/form-success" />
       <input type="hidden" name="_subject" value="Новое сообщение с сайта zelenka.online" />
       <input type="text" name="_gotcha" style="display:none" />
       <input type="submit" value="Отправить" />
