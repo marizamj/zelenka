@@ -39,7 +39,7 @@
         "label": "Ваша идея/предложение",
         "type": "textarea",
         "required": true,
-        "name": "message"
+        "name": "messageall"
       },
       {
         "label": "Чем вам нравится Зелёнка?",

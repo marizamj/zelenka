@@ -2,6 +2,7 @@
   font-size: 1.5em;
   width: 50%;
   margin-left: 25%;
+  text-align: center;
   /* margin-bottom: 2em; */
 }
 
@@ -9,6 +10,7 @@
   font-size: 0.8em;
   color: #c92121;
   text-align: end;
+  margin-left: 0.1em;
 }
 
 .formDescription {
@@ -20,6 +22,7 @@
   margin-top: 1.5em;
   margin-bottom: 0.5em;
   font-size: 0.8em;
+  text-align: start;
 }
 
 .form input,
@@ -46,22 +49,26 @@
   cursor: pointer;
   color: dimgrey;
   font-size: 1em;
-  width: 150px;
+  width: auto;
   border: 1px solid lightgrey;
   border-radius: 3px;
   text-align: center;
-  margin-left: calc(50% - 75px);
   margin-top: 1em;
 }
 
-.formSubmit:hover {
+.form input[type="submit"]:hover {
   background: #f5f5f5;
 }
 
-.thankYouMsg {
+.form input:disabled {
+  background: lightgrey;
+  cursor: default;
+}
+
+.error {
+  color: #c92121;
   text-align: center;
-  font-size: 1.5em;
-  margin: 10px;
+  margin-top: 1em;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -69,15 +76,6 @@
     width: 80%;
     margin: 0;
     margin-left: 10%;
-    font-size: 1.3em;
-  }
-
-  .form input[type="submit"] {
-    width: 60%;
-    margin-left: 20%;
-  }
-
-  .thankYouMsg {
     font-size: 1.3em;
   }
 }

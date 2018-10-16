@@ -8,7 +8,7 @@ class ThankYou extends Component {
     return (
       <div className="thankYou">
         <p>Спасибо! Мы ответим вам в ближайшее время. Соня и Юля</p>
-        <img src={thankYouImg} className="thankYouImg" />
+        <img alt="Cпасибо!" src={thankYouImg} className="thankYouImg" />
       </div>
     );
   }
