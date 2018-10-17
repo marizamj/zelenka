@@ -1,0 +1,19 @@
+.error {
+  color: #c92121;
+  text-align: center;
+  margin: auto;
+  margin-top: 1em;
+  font-size: 1.5em;
+  max-width: 800px;
+  padding: 1em;
+}
+
+.error a {
+  color: #c92121;
+}
+
+@media only screen and (max-width: 1023px) {
+  .error {
+    font-size: 1.3em;
+  }
+}
