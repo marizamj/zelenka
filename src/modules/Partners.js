@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../css/Partners.css";
 
-import nlv from "../images/logo-nlv.jpg";
+import nlv from "../images/logo-nlv.png";
 
 class Partners extends Component {
   state = { visibleName: null };
