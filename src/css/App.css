@@ -1,6 +1,7 @@
 .container {
   position: relative;
   padding-bottom: 50px;
+  text-align: center;
 }
 
 .btnContainer {
@@ -22,6 +23,24 @@
   border: none;
 }
 
+.loading {
+  font-size: 1.5em;
+}
+
+.spinner {
+  animation: spin infinite 1s linear;
+  width: 50px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media only screen and (max-width: 1023px) {
   .btnContainer {
     margin-top: -20px;
@@ -30,5 +49,13 @@
   .btnImg {
     width: 140px;
     margin: 10px;
+  }
+
+  .spinner {
+    width: 30px;
+  }
+
+  .loading {
+    font-size: 1.3em;
   }
 }

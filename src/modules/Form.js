@@ -11,7 +11,7 @@ class Form extends Component {
   };
 
   render() {
-    const { type, handleSubmit, loading, error } = this.props;
+    const { type, handleSubmit } = this.props;
 
     return (
       <form
@@ -45,14 +45,7 @@ class Form extends Component {
             )}
           </label>
         ))}
-        <input
-          type="submit"
-          value={loading ? "Отправляем..." : "Отправить"}
-          disabled={loading}
-        />
-        {error && (
-          <div className="error">Что-то пошло не так, попробуйте еще раз.</div>
-        )}
+        <input type="submit" value="Отправить" />
       </form>
     );
   }

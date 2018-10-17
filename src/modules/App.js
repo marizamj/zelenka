@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { UnmountClosed as Collapse } from "react-collapse";
 import "../css/App.css";
+import sendForm from "../lib/sendForm";
 
+import Error from "./Error";
 import Form from "./Form";
 import Header from "./Header";
 import Video from "./Video";
@@ -11,6 +13,7 @@ import Partners from "./Partners";
 
 import btnPartners from "../images/btn-partners.png";
 import btnAll from "../images/btn-all.png";
+import spinner from "../images/spinner.png";
 
 class App extends Component {
   state = {
@@ -28,20 +31,12 @@ class App extends Component {
   handleSubmit = data => {
     this.setState({ formIsSend: false, loading: true, error: false });
 
-    fetch("https://zelenka-back-drjfmctccl.now.sh/form", {
-      method: "POST",
-      mode: "cors",
-      body: JSON.stringify(data),
-      headers: { "Content-Type": "application/json; charset=utf-8" }
-    })
-      .then(response => {
-        this.setState({
-          formIsSend: response.ok,
-          loading: false,
-          error: false
-        });
-        window.scrollTo({ top: this.buttons.current.offsetTop });
-      })
+    window.scrollTo({ top: this.buttons.current.offsetTop });
+
+    sendForm(data)
+      .then(res =>
+        this.setState({ formIsSend: res.ok, loading: false, error: !res.ok })
+      )
       .catch(error => {
         console.error(error);
         this.setState({ formIsSend: false, loading: false, error: true });
@@ -70,15 +65,26 @@ class App extends Component {
             onClick={() => this.toggleForm("all")}
           />
         </div>
-        <Collapse isOpened={formIsSend}>
-          <ThankYou />
-        </Collapse>
-        <Collapse isOpened={!formIsSend}>
+
+        {error && <Error />}
+        {formIsSend && !error && <ThankYou />}
+
+        {loading && (
+          <div className="loading">
+            <p>Отправляем...</p>
+            <img
+              className="spinner"
+              alt="Пожалуйста, подождите"
+              src={spinner}
+            />
+          </div>
+        )}
+
+        <Collapse isOpened={!formIsSend && !error && !loading}>
           <Form
             type={openForm}
             handleSubmit={this.handleSubmit}
             loading={loading}
-            error={error}
           />
         </Collapse>
         <Video />
