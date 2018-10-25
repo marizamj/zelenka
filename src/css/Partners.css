@@ -1,21 +1,41 @@
 .partners {
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-.partner-logo {
-  cursor: pointer;
-  width: 300px;
+.partners h2 {
+  flex: 1 0 100%;
+  margin-bottom: 1em;
 }
 
 .partner-container {
   position: relative;
+  padding: 4em 2em;
 }
 
 .partner-name {
-  display: block;
-  margin: auto;
-  margin-top: -20px;
-  margin-bottom: 10px;
-  width: 300px;
-  font-size: 18px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 1em;
+}
+
+.partner-logo {
+  cursor: pointer;
+  height: 130px;
+}
+
+@media only screen and (max-width: 1023px) {
+  .partners h2 {
+    margin-bottom: 2em;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .partners {
+    display: initial;
+  }
 }
