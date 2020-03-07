@@ -1,24 +1,25 @@
 import React, { Component } from "react";
 import { UnmountClosed as Collapse } from "react-collapse";
-import "../css/App.css";
-import sendForm from "../lib/sendForm";
-import videos from "../lib/videos";
+import "./css/App.css";
+import sendForm from "./lib/sendForm";
+import videos from "./lib/videos";
 
-import Error from "./Error";
-import Form from "./Form";
-import Header from "./Header";
-import Video from "./Video";
-import SocialMedia from "./SocialMedia";
-import ThankYou from "./ThankYou";
-import Partners from "./Partners";
+import Error from "./modules/Error";
+import Form from "./modules/Form";
+import Header from "./modules/Header";
+import Video from "./modules/Video";
+import SocialMedia from "./modules/SocialMedia";
+import ThankYou from "./modules/ThankYou";
+import Partners from "./modules/Partners";
 
-import btnPartners from "../images/btn-partners.png";
-import btnAll from "../images/btn-all.png";
-import spinner from "../images/spinner.png";
+import btnPartners from "./images/btn-partners.png";
+import btnAll from "./images/btn-all.png";
+import spinner from "./images/spinner.png";
+import { FormType } from "./types";
 
 class App extends Component {
   state = {
-    openForm: "partners",
+    openForm: "partners" as FormType,
     error: false,
     formIsSend: false,
     loading: false
@@ -26,13 +27,15 @@ class App extends Component {
 
   buttons = React.createRef();
 
-  toggleForm = type =>
+  toggleForm = (type: FormType) =>
     this.setState({ formIsSend: false, error: false, openForm: type });
 
-  handleSubmit = data => {
+  // TODO any
+  handleSubmit = (data: any) => {
     this.setState({ formIsSend: false, loading: true, error: false });
 
-    window.scrollTo({ top: this.buttons.current.offsetTop });
+    // TODO make this work with TS
+    // window.scrollTo({ top: this.buttons.current.offsetTop });
 
     sendForm(data)
       .then(res =>
@@ -52,7 +55,7 @@ class App extends Component {
         <Header />
         <SocialMedia />
 
-        <div className="btnContainer" ref={this.buttons}>
+        <div className="btnContainer">
           <img
             src={btnPartners}
             alt="Партнерам"
@@ -85,7 +88,7 @@ class App extends Component {
           <Form
             type={openForm}
             handleSubmit={this.handleSubmit}
-            loading={loading}
+            // loading={loading} // TODO not used?
           />
         </Collapse>
         <Video videos={videos} />
