@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { UnmountClosed as Collapse } from "react-collapse";
 import "../css/App.css";
 import sendForm from "../lib/sendForm";
+import videos from "../lib/videos";
 
 import Error from "./Error";
 import Form from "./Form";
@@ -87,7 +88,8 @@ class App extends Component {
             loading={loading}
           />
         </Collapse>
-        <Video />
+        <Video videos={videos} />
+
         <Partners />
       </div>
     );

@@ -3,17 +3,22 @@ import "../css/Video.css";
 
 class Video extends Component {
   render() {
+    const { videos } = this.props;
     return (
-      <div className="video">
-        <h2>Первый выпуск</h2>
-        <iframe
-          className="iframe"
-          title="First video"
-          src="https://www.youtube.com/embed/F4iUlW4LpE8"
-          frameBorder="0"
-          allow="autoplay; encrypted-media"
-          allowFullScreen
-        />
+      <div className="video-container">
+        {videos.map(({ title, src }) => (
+          <div className="video">
+            <h2>{title}</h2>
+            <iframe
+              className="iframe"
+              title={title}
+              src={src}
+              frameBorder="0"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+            />
+          </div>
+        ))}
       </div>
     );
   }
