@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { reactKey } from "../lib/misc";
 import "../css/Video.css";
 
 class Video extends Component {
@@ -7,7 +8,7 @@ class Video extends Component {
     return (
       <div className="video-container">
         {videos.map(({ title, src }) => (
-          <div className="video">
+          <div className="video" key={reactKey({ title, src })}>
             <h2>{title}</h2>
             <iframe
               className="iframe"
