@@ -3,6 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "http://zelenka.online/",
+  "scripts": {
+    "start": "react-scripts start",
+    "clean": "rm -rf ./build",
+    "build": "npm run clean && react-scripts build",
+    "test": "react-scripts test",
+    "lint": "tslint --project .",
+    "eject": "react-scripts eject",
+    "copy-cname": "cp CNAME build",
+    "link": "ln -s ./index.html ./build/404.html",
+    "deploy": "npm run build && npm run copy-cname && npm run link && gh-pages --dist build --branch gh-pages"
+  },
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.13.0",
@@ -21,19 +32,6 @@
     "@types/uuid": "^7.0.0",
     "tslint": "^6.0.0",
     "typescript": "^3.8.3"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "clean": "rm -rf ./build",
-    "build": "npm run clean && react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "copy-cname": "cp CNAME build",
-    "link": "ln -s ./index.html ./build/404.html",
-    "deploy": "npm run build && npm run copy-cname && npm run link && gh-pages --dist build --branch gh-pages"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": [
     ">0.2%",

@@ -2,6 +2,7 @@ import * as React from "react";
 import "../css/Partners.css";
 
 import { partners } from "../lib/partners";
+import { reactKey } from "../lib/misc";
 
 const Partners = () => {
   const [visibleName, setVisibleName] = React.useState("");
@@ -10,21 +11,24 @@ const Partners = () => {
     <div className="partners">
       <h2>Уже работают с нами</h2>
 
-      {partners.map(partner => (
-        <div className="partner-container" key={partner.id}>
+      {partners.map(({ id, title, url, img }) => (
+        <div
+          className="partner-container"
+          key={reactKey({ id, title, url, img })}
+        >
           <span
             className={`partner-name ${
-              visibleName === partner.id ? "opacity1" : "opacity0"
+              visibleName === id ? "opacity1" : "opacity0"
             }`}
           >
-            {partner.title}
+            {title}
           </span>
-          <a href={partner.url} target="_blank" rel="noopener noreferrer">
+          <a href={url} target="_blank" rel="noopener noreferrer">
             <img
-              src={partner.img}
-              alt={partner.title}
+              src={img}
+              alt={title}
               className="partner-logo"
-              onMouseEnter={() => setVisibleName(partner.id)}
+              onMouseEnter={() => setVisibleName(id)}
               onMouseLeave={() => setVisibleName("")}
             />
           </a>

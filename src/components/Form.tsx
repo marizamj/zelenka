@@ -31,7 +31,7 @@ const Form = ({ type, handleSubmit }: Props) => {
           {field.type === "textarea" ? (
             <textarea
               onChange={({ target: { value, name } }) => {
-                setFormState({ [name]: value });
+                setFormState({ ...formState, [name]: value });
               }}
               required={field.required}
               name={field.name}
@@ -39,7 +39,7 @@ const Form = ({ type, handleSubmit }: Props) => {
           ) : (
             <input
               onChange={({ target: { value, name } }) => {
-                setFormState({ [name]: value });
+                setFormState({ ...formState, [name]: value });
               }}
               required={field.required}
               type={field.type || "text"}

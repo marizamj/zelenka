@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Route } from "react-router-dom";
 import "./css/index.css";
 import App from "./App";
-import Form from "./modules/Form";
+import { Form } from "./components";
 
 ReactDOM.render(
   <BrowserRouter basename={process.env.PUBLIC_URL}>

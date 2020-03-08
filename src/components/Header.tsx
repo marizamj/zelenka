@@ -3,6 +3,7 @@ import "../css/Header.css";
 
 import logo from "../images/logo.png";
 
+// TODO should be clickable
 const Header = () => (
   <div className="header">
     <div className="title-img" />

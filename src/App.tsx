@@ -4,13 +4,15 @@ import "./css/App.css";
 import sendForm from "./lib/sendForm";
 import videos from "./lib/videos";
 
-import Error from "./modules/Error";
-import Form from "./modules/Form";
-import Header from "./modules/Header";
-import Video from "./modules/Video";
-import SocialMedia from "./modules/SocialMedia";
-import ThankYou from "./modules/ThankYou";
-import Partners from "./modules/Partners";
+import {
+  Error,
+  Form,
+  Header,
+  Video,
+  SocialMedia,
+  ThankYou,
+  Partners
+} from "./components";
 
 import btnPartners from "./images/btn-partners.png";
 import btnAll from "./images/btn-all.png";
@@ -25,26 +27,30 @@ class App extends Component {
     loading: false
   };
 
-  buttons = React.createRef();
+  // TODO
+  // buttons = React.createRef();
 
   toggleForm = (type: FormType) =>
     this.setState({ formIsSend: false, error: false, openForm: type });
 
-  // TODO any
-  handleSubmit = (data: any) => {
+  handleSubmit = (data: FormData) => {
     this.setState({ formIsSend: false, loading: true, error: false });
 
     // TODO make this work with TS
     // window.scrollTo({ top: this.buttons.current.offsetTop });
 
-    sendForm(data)
-      .then(res =>
-        this.setState({ formIsSend: res.ok, loading: false, error: !res.ok })
-      )
-      .catch(error => {
-        console.error(error);
-        this.setState({ formIsSend: false, loading: false, error: true });
-      });
+    if (process.env.NODE_ENV === "development") {
+      this.setState({ formIsSend: true, loading: false, error: false });
+    } else {
+      sendForm(data)
+        .then(res =>
+          this.setState({ formIsSend: res.ok, loading: false, error: !res.ok })
+        )
+        .catch(error => {
+          console.error(error);
+          this.setState({ formIsSend: false, loading: false, error: true });
+        });
+    }
   };
 
   render() {

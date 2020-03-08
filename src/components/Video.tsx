@@ -2,8 +2,9 @@ import * as React from "react";
 import { reactKey } from "../lib/misc";
 import "../css/Video.css";
 
+// TODO types
 interface Props {
-  videos: Array<Record<string, string>>;
+  videos: Record<string, string>[];
 }
 
 const Video = ({ videos }: Props) => (
