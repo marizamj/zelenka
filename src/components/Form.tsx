@@ -1,16 +1,15 @@
 import * as React from "react";
 import "../css/Form.css";
 import formFields from "../lib/formFields.json";
-import { FormType } from "../types";
+import { FormType, FormData } from "../types";
 
-// TODO any
 interface Props {
   type: FormType;
-  handleSubmit: (...args: any[]) => any;
+  handleSubmit: (formState: FormData) => void;
 }
 
 const Form = ({ type, handleSubmit }: Props) => {
-  const [formState, setFormState] = React.useState({});
+  const [formState, setFormState] = React.useState<FormData>({} as FormData);
 
   return (
     <form

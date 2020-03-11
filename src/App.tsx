@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { UnmountClosed as Collapse } from "react-collapse";
 import "./css/App.css";
 import sendForm from "./lib/sendForm";
@@ -17,91 +17,88 @@ import {
 import btnPartners from "./images/btn-partners.png";
 import btnAll from "./images/btn-all.png";
 import spinner from "./images/spinner.png";
-import { FormType } from "./types";
+import { FormType, FormData } from "./types";
 
-class App extends Component {
-  state = {
+const App = () => {
+  const buttons = React.useRef<HTMLDivElement>(null);
+  const [state, setState] = React.useState({
     openForm: "partners" as FormType,
     error: false,
-    formIsSend: false,
+    formIsSent: false,
     loading: false
-  };
+  });
 
-  // TODO
-  // buttons = React.createRef();
+  const updateState = (newState: {
+    openForm?: FormType;
+    error?: boolean;
+    formIsSent?: boolean;
+    loading?: boolean;
+  }) => setState({ ...state, ...newState });
 
-  toggleForm = (type: FormType) =>
-    this.setState({ formIsSend: false, error: false, openForm: type });
+  const toggleForm = (type: FormType) =>
+    updateState({ formIsSent: false, error: false, openForm: type });
 
-  handleSubmit = (data: FormData) => {
-    this.setState({ formIsSend: false, loading: true, error: false });
+  const handleSubmit = (data: FormData) => {
+    updateState({ formIsSent: false, loading: true, error: false });
 
-    // TODO make this work with TS
-    // window.scrollTo({ top: this.buttons.current.offsetTop });
+    if (buttons.current) {
+      window.scrollTo({ top: buttons.current.offsetTop });
+    }
 
     if (process.env.NODE_ENV === "development") {
-      this.setState({ formIsSend: true, loading: false, error: false });
+      console.log("FORM DATA", data);
+      setState({ ...state, formIsSent: true, loading: false, error: false });
     } else {
       sendForm(data)
         .then(res =>
-          this.setState({ formIsSend: res.ok, loading: false, error: !res.ok })
+          updateState({ formIsSent: res.ok, loading: false, error: !res.ok })
         )
         .catch(error => {
           console.error(error);
-          this.setState({ formIsSend: false, loading: false, error: true });
+          updateState({ formIsSent: false, loading: false, error: true });
         });
     }
   };
 
-  render() {
-    const { openForm, formIsSend, loading, error } = this.state;
+  const { openForm, formIsSent, loading, error } = state;
 
-    return (
-      <div className="container">
-        <Header />
-        <SocialMedia />
+  return (
+    <div className="container">
+      <Header />
+      <SocialMedia />
 
-        <div className="btnContainer">
-          <img
-            src={btnPartners}
-            alt="Партнерам"
-            className={`btnImg ${openForm === "partners" && "selected"}`}
-            onClick={() => this.toggleForm("partners")}
-          />
-          <img
-            src={btnAll}
-            alt="Всем"
-            className={`btnImg ${openForm === "all" && "selected"}`}
-            onClick={() => this.toggleForm("all")}
-          />
-        </div>
-
-        {error && <Error />}
-        {formIsSend && !error && <ThankYou />}
-
-        {loading && (
-          <div className="loading">
-            <p>Отправляем...</p>
-            <img
-              className="spinner"
-              alt="Пожалуйста, подождите"
-              src={spinner}
-            />
-          </div>
-        )}
-
-        <Collapse isOpened={!formIsSend && !error && !loading}>
-          <Form
-            type={openForm}
-            handleSubmit={this.handleSubmit}
-            // loading={loading} // TODO not used?
-          />
-        </Collapse>
-        <Video videos={videos} />
-        <Partners />
+      <div ref={buttons} className="btnContainer">
+        <img
+          src={btnPartners}
+          alt="Партнерам"
+          className={`btnImg ${openForm === "partners" && "selected"}`}
+          onClick={() => toggleForm("partners")}
+        />
+        <img
+          src={btnAll}
+          alt="Всем"
+          className={`btnImg ${openForm === "all" && "selected"}`}
+          onClick={() => toggleForm("all")}
+        />
       </div>
-    );
-  }
-}
+
+      {error && <Error />}
+      {formIsSent && !error && <ThankYou />}
+
+      {loading && (
+        <div className="loading">
+          <p>Отправляем...</p>
+          <img className="spinner" alt="Пожалуйста, подождите" src={spinner} />
+        </div>
+      )}
+
+      <Collapse isOpened={!formIsSent && !error && !loading}>
+        <Form type={openForm} handleSubmit={handleSubmit} />
+      </Collapse>
+      <Video videos={videos} />
+      <Partners />
+    </div>
+  );
+};
 
 export default App;

@@ -1,19 +1,21 @@
 import * as React from "react";
 import "../css/Header.css";
+import { Link } from "react-router-dom";
 
 import logo from "../images/logo.png";
 
-// TODO should be clickable
 const Header = () => (
-  <div className="header">
+  <header className="header">
     <div className="title-img" />
     <div className="logo-container">
-      <img src={logo} className="logo" alt="ЗЕЛЕНКА" />
+      <Link to="/">
+        <img src={logo} className="logo" alt="ЗЕЛЕНКА" />
+      </Link>
       <p className="logo-text">
         Показываем хирургию и медицину так, чтобы не тошнило
       </p>
     </div>
-  </div>
+  </header>
 );
 
 export default Header;
