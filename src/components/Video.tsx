@@ -1,10 +1,10 @@
 import * as React from "react";
 import { reactKey } from "../lib/misc";
 import "../css/Video.css";
+import { VideoData } from "../types";
 
-// TODO types
 interface Props {
-  videos: Record<string, string>[];
+  videos: VideoData[];
 }
 
 const Video = ({ videos }: Props) => (

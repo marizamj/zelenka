@@ -20,3 +20,15 @@ export interface FormAll {
 }
 
 export type FormData = FormCommon & (FormPartners | FormAll);
+
+export interface VideoData {
+  src: string;
+  title: string;
+}
+
+export interface PartnerData {
+  id: string;
+  title: string;
+  url: string;
+  img: string;
+}

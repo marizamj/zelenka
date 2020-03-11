@@ -1,5 +1,4 @@
-// TODO any
-export default function(data: any) {
+export default function(data: FormData) {
   return fetch("https://zelenka-back.now.sh/form", {
     method: "POST",
     mode: "cors",

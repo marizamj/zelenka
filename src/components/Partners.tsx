@@ -1,7 +1,7 @@
 import * as React from "react";
 import "../css/Partners.css";
 
-import { partners } from "../lib/partners";
+import partners from "../lib/partners";
 import { reactKey } from "../lib/misc";
 
 const Partners = () => {

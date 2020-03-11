@@ -98,7 +98,6 @@ class App extends Component {
           />
         </Collapse>
         <Video videos={videos} />
-
         <Partners />
       </div>
     );
