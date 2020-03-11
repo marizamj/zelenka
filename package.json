@@ -8,7 +8,7 @@
     "clean": "rm -rf ./build",
     "build": "npm run clean && react-scripts build",
     "test": "react-scripts test",
-    "lint": "tslint --project .",
+    "lint": "eslint ./src/**/*.{ts,tsx,json}",
     "eject": "react-scripts eject",
     "copy-cname": "cp CNAME build",
     "link": "ln -s ./index.html ./build/404.html",
@@ -28,8 +28,8 @@
     "@types/react-dom": "^16.9.5",
     "@types/react-router-dom": "^5.1.3",
     "@types/uuid": "^7.0.0",
+    "eslint": "^6.8.0",
     "gh-pages": "^2.2.0",
-    "tslint": "^6.0.0",
     "typescript": "^3.8.3"
   },
   "browserslist": [
