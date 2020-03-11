@@ -1,8 +1,9 @@
 import nlv from "../images/logo-nlv.png";
 import pv from "../images/logo-pv.png";
 import afisha from "../images/logo-afisha.png";
+import { PartnerData } from "../types";
 
-export const partners = [
+const partners: PartnerData[] = [
   {
     id: "pv",
     title: "Бар «Петров и  Васечка»",
@@ -23,3 +24,5 @@ export const partners = [
     img: afisha
   }
 ];
+
+export default partners;
