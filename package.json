@@ -6,13 +6,13 @@
   "scripts": {
     "start": "react-scripts start",
     "clean": "rm -rf ./build",
-    "build": "npm run clean && react-scripts build",
+    "build": "yarn run clean && react-scripts build",
     "test": "react-scripts test",
     "lint": "eslint ./src/**/*.{ts,tsx,json}",
     "eject": "react-scripts eject",
     "copy-cname": "cp CNAME build",
     "link": "ln -s ./index.html ./build/404.html",
-    "deploy": "npm run build && npm run copy-cname && npm run link && gh-pages --dist build --branch gh-pages"
+    "deploy": "yarn build && yarn run copy-cname && yarn run link && gh-pages --dist build --branch gh-pages"
   },
   "dependencies": {
     "react": "^16.13.0",
