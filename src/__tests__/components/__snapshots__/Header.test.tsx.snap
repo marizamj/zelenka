@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Matches snapshot 1`] = `
+<div>
+  <header
+    class="header"
+  >
+    <div
+      class="title-img"
+    />
+    <div
+      class="logo-container"
+    >
+      <img
+        alt="ЗЕЛЕНКА"
+        class="logo"
+        src="logo.png"
+      />
+      <p
+        class="logo-text"
+      >
+        Показываем хирургию и медицину так, чтобы не тошнило
+      </p>
+    </div>
+  </header>
+</div>
+`;

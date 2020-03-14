@@ -41,23 +41,18 @@ const App = () => {
   const handleSubmit = (data: FormData) => {
     updateState({ formIsSent: false, loading: true, error: false });
 
-    if (buttons.current) {
+    if (buttons.current && window) {
       window.scrollTo({ top: buttons.current.offsetTop });
     }
 
-    if (process.env.NODE_ENV === "development") {
-      console.log("FORM DATA", data);
-      setState({ ...state, formIsSent: true, loading: false, error: false });
-    } else {
-      sendForm(data)
-        .then(res =>
-          updateState({ formIsSent: res.ok, loading: false, error: !res.ok })
-        )
-        .catch(error => {
-          console.error(error);
-          updateState({ formIsSent: false, loading: false, error: true });
-        });
-    }
+    sendForm(data)
+      .then(res =>
+        updateState({ formIsSent: res.ok, loading: false, error: !res.ok })
+      )
+      .catch(error => {
+        console.error(error);
+        updateState({ formIsSent: false, loading: false, error: true });
+      });
   };
 
   const { openForm, formIsSent, loading, error } = state;
@@ -73,12 +68,16 @@ const App = () => {
           alt="Партнерам"
           className={`btnImg ${openForm === "partners" && "selected"}`}
           onClick={() => toggleForm("partners")}
+          role="button"
+          data-testid="button-partners"
         />
         <img
           src={btnAll}
           alt="Всем"
           className={`btnImg ${openForm === "all" && "selected"}`}
           onClick={() => toggleForm("all")}
+          role="button"
+          data-testid="button-all"
         />
       </div>
 
