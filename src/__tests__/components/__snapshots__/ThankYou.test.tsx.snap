@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThankYou Matches snapshot 1`] = `
+<div>
+  <div
+    class="thankYou"
+  >
+    <p>
+      Спасибо! Мы ответим вам в ближайшее время. Соня и Юля
+    </p>
+    <img
+      alt="Cпасибо!"
+      class="thankYouImg"
+      src="thank-you.png"
+    />
+  </div>
+</div>
+`;

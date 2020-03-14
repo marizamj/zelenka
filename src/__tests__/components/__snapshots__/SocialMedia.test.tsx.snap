@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SocialMedia Matches snapshot 1`] = `
+<div>
+  <div
+    class="sm"
+  >
+    <a
+      href="https://www.youtube.com/channel/UCIxnXifkJRTPOIe4AQM_fBQ"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="YouTube"
+        class="sm-btn"
+        src="youtube.png"
+        style="margin-right: 5.5em;"
+      />
+    </a>
+    <a
+      href="https://www.facebook.com/3elenka.online/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="Facebook"
+        class="sm-btn"
+        src="facebook.png"
+      />
+    </a>
+  </div>
+</div>
+`;

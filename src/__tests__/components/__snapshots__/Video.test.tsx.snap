@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Video Matches snapshot 1`] = `
+<div>
+  <div
+    class="video-container"
+  >
+    <div
+      class="video"
+    >
+      <h2>
+        test-video-title
+      </h2>
+      <iframe
+        allow="autoplay; encrypted-media"
+        allowfullscreen=""
+        class="iframe"
+        frameborder="0"
+        src="test-video-url"
+        title="test-video-title"
+      />
+    </div>
+  </div>
+</div>
+`;

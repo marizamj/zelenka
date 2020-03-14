@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Partners Matches snapshot 1`] = `
+<div>
+  <div
+    class="partners"
+  >
+    <h2>
+      Уже работают с нами
+    </h2>
+    <div
+      class="partner-container"
+    >
+      <span
+        class="partner-name opacity0"
+      >
+        Бар «Петров и  Васечка»
+      </span>
+      <a
+        href="http://piv.pub/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="Бар «Петров и  Васечка»"
+          class="partner-logo"
+          src="logo-pv.png"
+        />
+      </a>
+    </div>
+    <div
+      class="partner-container"
+    >
+      <span
+        class="partner-name opacity0"
+      >
+        Клиника лазерной коррекции зрения «Новый взгляд»
+      </span>
+      <a
+        href="http://www.nlv.ru/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="Клиника лазерной коррекции зрения «Новый взгляд»"
+          class="partner-logo"
+          src="logo-nlv.png"
+        />
+      </a>
+    </div>
+    <div
+      class="partner-container"
+    >
+      <span
+        class="partner-name opacity0"
+      >
+        Материал «Афиша-Daily» о нас
+      </span>
+      <a
+        href="https://daily.afisha.ru/news/20920-vyshel-pervyy-vypusk-bloga-zelenka-tam-rasskazyvayut-o-hirurgii-tak-chtoby-ne-toshnilo/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="Материал «Афиша-Daily» о нас"
+          class="partner-logo"
+          src="logo-afisha.png"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;

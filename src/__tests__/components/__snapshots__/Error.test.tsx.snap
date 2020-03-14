@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error Matches snapshot 1`] = `
+<div>
+  <div
+    class="error"
+    data-testid="error"
+  >
+    Что-то пошло не так. Пожалуйста, напишите нам на почту
+     
+    <a
+      href="mailto:zelenkanasha@gmail.com"
+    >
+      zelenkanasha@gmail.com
+    </a>
+     или в
+     
+    <a
+      href="https://www.facebook.com/3elenka.online/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      фейсбук
+    </a>
+    .
+  </div>
+</div>
+`;
