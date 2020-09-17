@@ -3,21 +3,21 @@
 exports[`Header Matches snapshot 1`] = `
 <div>
   <header
-    class="header"
+    class="css-r270z7-Header"
   >
     <div
-      class="title-img"
+      class="css-1mq611n-Header"
     />
     <div
-      class="logo-container"
+      class="css-1twly28-Header"
     >
       <img
         alt="ЗЕЛЕНКА"
-        class="logo"
+        class="css-3dul9o-Header"
         src="logo.png"
       />
       <p
-        class="logo-text"
+        class="css-rdlycs-Header"
       >
         Показываем хирургию и медицину так, чтобы не тошнило
       </p>

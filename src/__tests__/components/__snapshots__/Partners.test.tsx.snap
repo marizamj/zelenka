@@ -3,16 +3,16 @@
 exports[`Partners Matches snapshot 1`] = `
 <div>
   <div
-    class="partners"
+    class="css-1pietir-Partners"
   >
     <h2>
       Уже работают с нами
     </h2>
     <div
-      class="partner-container"
+      class="css-1h34w8k"
     >
       <span
-        class="partner-name opacity0"
+        class="css-cz0j02"
       >
         Бар «Петров и  Васечка»
       </span>
@@ -23,16 +23,16 @@ exports[`Partners Matches snapshot 1`] = `
       >
         <img
           alt="Бар «Петров и  Васечка»"
-          class="partner-logo"
+          class="css-g4hlvx"
           src="logo-pv.png"
         />
       </a>
     </div>
     <div
-      class="partner-container"
+      class="css-1h34w8k"
     >
       <span
-        class="partner-name opacity0"
+        class="css-cz0j02"
       >
         Клиника лазерной коррекции зрения «Новый взгляд»
       </span>
@@ -43,16 +43,16 @@ exports[`Partners Matches snapshot 1`] = `
       >
         <img
           alt="Клиника лазерной коррекции зрения «Новый взгляд»"
-          class="partner-logo"
+          class="css-g4hlvx"
           src="logo-nlv.png"
         />
       </a>
     </div>
     <div
-      class="partner-container"
+      class="css-1h34w8k"
     >
       <span
-        class="partner-name opacity0"
+        class="css-cz0j02"
       >
         Материал «Афиша-Daily» о нас
       </span>
@@ -63,7 +63,7 @@ exports[`Partners Matches snapshot 1`] = `
       >
         <img
           alt="Материал «Афиша-Daily» о нас"
-          class="partner-logo"
+          class="css-g4hlvx"
           src="logo-afisha.png"
         />
       </a>

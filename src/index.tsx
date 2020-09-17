@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route } from "react-router-dom";
-import "./css/index.css";
 import App from "./App";
+import { GlobalCSS } from "./components";
 
 ReactDOM.render(
   <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <GlobalCSS />
     <div>
       <Route path="/" component={App} />
     </div>

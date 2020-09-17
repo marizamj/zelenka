@@ -1,6 +1,6 @@
-import * as React from "react";
-import { reactKey } from "../lib/misc";
-import "../css/Video.css";
+/** @jsx jsx */
+import { jsx, css } from "@emotion/core";
+import { breakpoints, reactKey } from "../lib/misc";
 import { VideoData } from "../types";
 
 interface Props {
@@ -8,12 +8,12 @@ interface Props {
 }
 
 const Video = ({ videos }: Props) => (
-  <div className="video-container">
+  <div css={videoContainerStyle}>
     {videos.map(({ title, src }) => (
-      <div className="video" key={reactKey({ title, src })}>
+      <div css={videoStyle} key={reactKey({ title, src })}>
         <h2>{title}</h2>
         <iframe
-          className="iframe"
+          css={iframeStyle}
           title={title}
           src={src}
           frameBorder="0"
@@ -24,5 +24,26 @@ const Video = ({ videos }: Props) => (
     ))}
   </div>
 );
+
+const videoContainerStyle = css`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
+const videoStyle = css`
+  text-align: center;
+  margin: 0 2em 0 2em;
+`;
+
+const iframeStyle = css`
+  width: 560px;
+  height: 315px;
+  ${breakpoints.maxWidth560} {
+    width: 300px;
+    height: 200px;
+  }
+`;
 
 export default Video;

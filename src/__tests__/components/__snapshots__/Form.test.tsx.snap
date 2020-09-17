@@ -3,16 +3,16 @@
 exports[`Form Matches snapshot for all 1`] = `
 <div>
   <form
-    class="form"
+    class="css-13tf4h1-Form"
     data-testid="form-all"
   >
     <div
-      class="formDescription"
+      class="css-19lds2-Form"
     >
       Хотите что-то сказать? Предложить идею или помочь с экспертизой? Стать героем выпуска, поделившись своей историей столкновения с хирургами? Мы внимательно прочтем ваше письмо и ответим, если заинтересуемся.
     </div>
     <p
-      class="required"
+      class="css-zjqj7m-Form"
     >
       * - обязательные поля
     </p>
@@ -20,11 +20,11 @@ exports[`Form Matches snapshot for all 1`] = `
       for="field-name"
     >
       <p
-        class="formLabel"
+        class="css-1xzd690"
       >
         Как вас зовут?
         <span
-          class="required"
+          class="css-430mmm"
         >
           *
         </span>
@@ -42,11 +42,11 @@ exports[`Form Matches snapshot for all 1`] = `
       for="field-email"
     >
       <p
-        class="formLabel"
+        class="css-1xzd690"
       >
         Контактный e-mail
         <span
-          class="required"
+          class="css-430mmm"
         >
           *
         </span>
@@ -64,11 +64,11 @@ exports[`Form Matches snapshot for all 1`] = `
       for="field-phone"
     >
       <p
-        class="formLabel"
+        class="css-1xzd690"
       >
         Телефон
         <span
-          class="required"
+          class="css-430mmm"
         >
           *
         </span>
@@ -86,11 +86,11 @@ exports[`Form Matches snapshot for all 1`] = `
       for="field-messageall"
     >
       <p
-        class="formLabel"
+        class="css-1xzd690"
       >
         Ваша идея/предложение
         <span
-          class="required"
+          class="css-430mmm"
         >
           *
         </span>
@@ -106,7 +106,7 @@ exports[`Form Matches snapshot for all 1`] = `
       for="field-compliments"
     >
       <p
-        class="formLabel"
+        class="css-1xzd690"
       >
         Чем вам нравится Зелёнка?
       </p>
@@ -120,7 +120,7 @@ exports[`Form Matches snapshot for all 1`] = `
       for="field-recommendations"
     >
       <p
-        class="formLabel"
+        class="css-1xzd690"
       >
         Что нам необходимо улучшить в своей работе?
       </p>
@@ -142,16 +142,16 @@ exports[`Form Matches snapshot for all 1`] = `
 exports[`Form Matches snapshot for partners 1`] = `
 <div>
   <form
-    class="form"
+    class="css-13tf4h1-Form"
     data-testid="form-partners"
   >
     <div
-      class="formDescription"
+      class="css-19lds2-Form"
     >
       Если вы врач, представитель клиники или любой другой компании, связанной с медициной, мы можем сделать очередной выпуск вместе. Заполните анкету, и мы очень скоро свяжемся с вами.
     </div>
     <p
-      class="required"
+      class="css-zjqj7m-Form"
     >
       * - обязательные поля
     </p>
@@ -159,11 +159,11 @@ exports[`Form Matches snapshot for partners 1`] = `
       for="field-name"
     >
       <p
-        class="formLabel"
+        class="css-1xzd690"
       >
         Как вас зовут?
         <span
-          class="required"
+          class="css-430mmm"
         >
           *
         </span>
@@ -181,11 +181,11 @@ exports[`Form Matches snapshot for partners 1`] = `
       for="field-email"
     >
       <p
-        class="formLabel"
+        class="css-1xzd690"
       >
         Контактный e-mail
         <span
-          class="required"
+          class="css-430mmm"
         >
           *
         </span>
@@ -203,11 +203,11 @@ exports[`Form Matches snapshot for partners 1`] = `
       for="field-phone"
     >
       <p
-        class="formLabel"
+        class="css-1xzd690"
       >
         Телефон
         <span
-          class="required"
+          class="css-430mmm"
         >
           *
         </span>
@@ -225,11 +225,11 @@ exports[`Form Matches snapshot for partners 1`] = `
       for="field-workplace"
     >
       <p
-        class="formLabel"
+        class="css-1xzd690"
       >
         Где вы работаете? Не забудьте адрес сайта.
         <span
-          class="required"
+          class="css-430mmm"
         >
           *
         </span>
@@ -247,11 +247,11 @@ exports[`Form Matches snapshot for partners 1`] = `
       for="field-message"
     >
       <p
-        class="formLabel"
+        class="css-1xzd690"
       >
         О чем вы хотели бы рассказать в Зелёнке?
         <span
-          class="required"
+          class="css-430mmm"
         >
           *
         </span>
@@ -267,7 +267,7 @@ exports[`Form Matches snapshot for partners 1`] = `
       for="field-money"
     >
       <p
-        class="formLabel"
+        class="css-1xzd690"
       >
         Сколько денег вы готовы потратить на спонсорский выпуск?
       </p>
@@ -283,7 +283,7 @@ exports[`Form Matches snapshot for partners 1`] = `
       for="field-startDate"
     >
       <p
-        class="formLabel"
+        class="css-1xzd690"
       >
         Когда хотите начать?
       </p>

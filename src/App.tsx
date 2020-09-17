@@ -1,6 +1,7 @@
-import React from "react";
+/** @jsx jsx */
+import { jsx, css, keyframes } from "@emotion/core";
+import { useState, useRef } from "react";
 import { UnmountClosed as Collapse } from "react-collapse";
-import "./css/App.css";
 import sendForm from "./lib/sendForm";
 import videos from "./lib/videos";
 
@@ -18,10 +19,11 @@ import btnPartners from "./images/btn-partners.png";
 import btnAll from "./images/btn-all.png";
 import spinner from "./images/spinner.png";
 import { FormType, FormData } from "./types";
+import { breakpoints } from "./lib/misc";
 
 const App = () => {
-  const buttons = React.useRef<HTMLDivElement>(null);
-  const [state, setState] = React.useState({
+  const buttons = useRef<HTMLDivElement>(null);
+  const [state, setState] = useState({
     openForm: "partners" as FormType,
     error: false,
     formIsSent: false,
@@ -58,15 +60,15 @@ const App = () => {
   const { openForm, formIsSent, loading, error } = state;
 
   return (
-    <div className="container">
+    <div css={containerStyle}>
       <Header />
       <SocialMedia />
 
-      <div ref={buttons} className="btnContainer">
+      <div ref={buttons} css={btnContainerStyle}>
         <img
           src={btnPartners}
           alt="Партнерам"
-          className={`btnImg ${openForm === "partners" && "selected"}`}
+          css={btnImgStyle(openForm === "partners")}
           onClick={() => toggleForm("partners")}
           role="button"
           data-testid="button-partners"
@@ -74,7 +76,7 @@ const App = () => {
         <img
           src={btnAll}
           alt="Всем"
-          className={`btnImg ${openForm === "all" && "selected"}`}
+          css={btnImgStyle(openForm === "all")}
           onClick={() => toggleForm("all")}
           role="button"
           data-testid="button-all"
@@ -85,9 +87,9 @@ const App = () => {
       {formIsSent && !error && <ThankYou />}
 
       {loading && (
-        <div className="loading">
+        <div css={loadingStyle}>
           <p>Отправляем...</p>
-          <img className="spinner" alt="Пожалуйста, подождите" src={spinner} />
+          <img css={spinnerStyle} alt="Пожалуйста, подождите" src={spinner} />
         </div>
       )}
 
@@ -99,5 +101,54 @@ const App = () => {
     </div>
   );
 };
+
+const containerStyle = css`
+  position: relative;
+  padding-bottom: 50px;
+  text-align: center;
+`;
+
+const btnContainerStyle = css`
+  text-align: center;
+  margin-top: -50px;
+  ${breakpoints.maxWidth1023} {
+    margin-top: -20px;
+  }
+`;
+
+const btnImgStyle = (selected: boolean) => css`
+  width: 200px;
+  cursor: pointer;
+  margin: 20px;
+  ${selected} // fix me
+  ${breakpoints.maxWidth1023} {
+    width: 140px;
+    margin: 10px;
+  }
+`;
+
+const loadingStyle = css`
+  font-size: 1.5em;
+  ${breakpoints.maxWidth1023} {
+    font-size: 1.3em;
+  }
+`;
+
+const spin = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+const spinnerStyle = css`
+  animation: ${spin} infinite 1s linear;
+  width: 50px;
+  ${breakpoints.maxWidth1023} {
+    width: 30px;
+  }
+`;
 
 export default App;

@@ -3,14 +3,14 @@
 exports[`ThankYou Matches snapshot 1`] = `
 <div>
   <div
-    class="thankYou"
+    class="css-1v7on9z-ThankYou"
   >
     <p>
       Спасибо! Мы ответим вам в ближайшее время. Соня и Юля
     </p>
     <img
       alt="Cпасибо!"
-      class="thankYouImg"
+      class="css-1qajmaf-ThankYou"
       src="thank-you.png"
     />
   </div>

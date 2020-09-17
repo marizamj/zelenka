@@ -3,31 +3,31 @@
 exports[`App Matches snapshot 1`] = `
 <div>
   <div
-    class="container"
+    class="css-1yjfgfj-App"
   >
     <header
-      class="header"
+      class="css-r270z7-Header"
     >
       <div
-        class="title-img"
+        class="css-1mq611n-Header"
       />
       <div
-        class="logo-container"
+        class="css-1twly28-Header"
       >
         <img
           alt="ЗЕЛЕНКА"
-          class="logo"
+          class="css-3dul9o-Header"
           src="logo.png"
         />
         <p
-          class="logo-text"
+          class="css-rdlycs-Header"
         >
           Показываем хирургию и медицину так, чтобы не тошнило
         </p>
       </div>
     </header>
     <div
-      class="sm"
+      class="css-p9n527-SocialMedia"
     >
       <a
         href="https://www.youtube.com/channel/UCIxnXifkJRTPOIe4AQM_fBQ"
@@ -36,7 +36,7 @@ exports[`App Matches snapshot 1`] = `
       >
         <img
           alt="YouTube"
-          class="sm-btn"
+          class="css-qlvzh9-SocialMedia"
           src="youtube.png"
           style="margin-right: 5.5em;"
         />
@@ -48,24 +48,24 @@ exports[`App Matches snapshot 1`] = `
       >
         <img
           alt="Facebook"
-          class="sm-btn"
+          class="css-qlvzh9-SocialMedia"
           src="facebook.png"
         />
       </a>
     </div>
     <div
-      class="btnContainer"
+      class="css-k5lcjt-App"
     >
       <img
         alt="Партнерам"
-        class="btnImg selected"
+        class="css-1wlp2ut-App"
         data-testid="button-partners"
         role="button"
         src="btn-partners.png"
       />
       <img
         alt="Всем"
-        class="btnImg false"
+        class="css-1wlp2ut-App"
         data-testid="button-all"
         role="button"
         src="btn-all.png"
@@ -79,16 +79,16 @@ exports[`App Matches snapshot 1`] = `
         class="ReactCollapse--content"
       >
         <form
-          class="form"
+          class="css-13tf4h1-Form"
           data-testid="form-partners"
         >
           <div
-            class="formDescription"
+            class="css-19lds2-Form"
           >
             Если вы врач, представитель клиники или любой другой компании, связанной с медициной, мы можем сделать очередной выпуск вместе. Заполните анкету, и мы очень скоро свяжемся с вами.
           </div>
           <p
-            class="required"
+            class="css-zjqj7m-Form"
           >
             * - обязательные поля
           </p>
@@ -96,11 +96,11 @@ exports[`App Matches snapshot 1`] = `
             for="field-name"
           >
             <p
-              class="formLabel"
+              class="css-1xzd690"
             >
               Как вас зовут?
               <span
-                class="required"
+                class="css-430mmm"
               >
                 *
               </span>
@@ -118,11 +118,11 @@ exports[`App Matches snapshot 1`] = `
             for="field-email"
           >
             <p
-              class="formLabel"
+              class="css-1xzd690"
             >
               Контактный e-mail
               <span
-                class="required"
+                class="css-430mmm"
               >
                 *
               </span>
@@ -140,11 +140,11 @@ exports[`App Matches snapshot 1`] = `
             for="field-phone"
           >
             <p
-              class="formLabel"
+              class="css-1xzd690"
             >
               Телефон
               <span
-                class="required"
+                class="css-430mmm"
               >
                 *
               </span>
@@ -162,11 +162,11 @@ exports[`App Matches snapshot 1`] = `
             for="field-workplace"
           >
             <p
-              class="formLabel"
+              class="css-1xzd690"
             >
               Где вы работаете? Не забудьте адрес сайта.
               <span
-                class="required"
+                class="css-430mmm"
               >
                 *
               </span>
@@ -184,11 +184,11 @@ exports[`App Matches snapshot 1`] = `
             for="field-message"
           >
             <p
-              class="formLabel"
+              class="css-1xzd690"
             >
               О чем вы хотели бы рассказать в Зелёнке?
               <span
-                class="required"
+                class="css-430mmm"
               >
                 *
               </span>
@@ -204,7 +204,7 @@ exports[`App Matches snapshot 1`] = `
             for="field-money"
           >
             <p
-              class="formLabel"
+              class="css-1xzd690"
             >
               Сколько денег вы готовы потратить на спонсорский выпуск?
             </p>
@@ -220,7 +220,7 @@ exports[`App Matches snapshot 1`] = `
             for="field-startDate"
           >
             <p
-              class="formLabel"
+              class="css-1xzd690"
             >
               Когда хотите начать?
             </p>
@@ -241,10 +241,10 @@ exports[`App Matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="video-container"
+      class="css-1xdu56b-Video"
     >
       <div
-        class="video"
+        class="css-fn2lyz"
       >
         <h2>
           Первый выпуск
@@ -252,14 +252,14 @@ exports[`App Matches snapshot 1`] = `
         <iframe
           allow="autoplay; encrypted-media"
           allowfullscreen=""
-          class="iframe"
+          class="css-g1rpge"
           frameborder="0"
           src="https://www.youtube.com/embed/F4iUlW4LpE8"
           title="Первый выпуск"
         />
       </div>
       <div
-        class="video"
+        class="css-fn2lyz"
       >
         <h2>
           Второй выпуск
@@ -267,7 +267,7 @@ exports[`App Matches snapshot 1`] = `
         <iframe
           allow="autoplay; encrypted-media"
           allowfullscreen=""
-          class="iframe"
+          class="css-g1rpge"
           frameborder="0"
           src="https://www.youtube.com/embed/RFvHCQDeYGE"
           title="Второй выпуск"
@@ -275,16 +275,16 @@ exports[`App Matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="partners"
+      class="css-1pietir-Partners"
     >
       <h2>
         Уже работают с нами
       </h2>
       <div
-        class="partner-container"
+        class="css-1h34w8k"
       >
         <span
-          class="partner-name opacity0"
+          class="css-cz0j02"
         >
           Бар «Петров и  Васечка»
         </span>
@@ -295,16 +295,16 @@ exports[`App Matches snapshot 1`] = `
         >
           <img
             alt="Бар «Петров и  Васечка»"
-            class="partner-logo"
+            class="css-g4hlvx"
             src="logo-pv.png"
           />
         </a>
       </div>
       <div
-        class="partner-container"
+        class="css-1h34w8k"
       >
         <span
-          class="partner-name opacity0"
+          class="css-cz0j02"
         >
           Клиника лазерной коррекции зрения «Новый взгляд»
         </span>
@@ -315,16 +315,16 @@ exports[`App Matches snapshot 1`] = `
         >
           <img
             alt="Клиника лазерной коррекции зрения «Новый взгляд»"
-            class="partner-logo"
+            class="css-g4hlvx"
             src="logo-nlv.png"
           />
         </a>
       </div>
       <div
-        class="partner-container"
+        class="css-1h34w8k"
       >
         <span
-          class="partner-name opacity0"
+          class="css-cz0j02"
         >
           Материал «Афиша-Daily» о нас
         </span>
@@ -335,7 +335,7 @@ exports[`App Matches snapshot 1`] = `
         >
           <img
             alt="Материал «Афиша-Daily» о нас"
-            class="partner-logo"
+            class="css-g4hlvx"
             src="logo-afisha.png"
           />
         </a>

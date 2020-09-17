@@ -3,7 +3,7 @@
 exports[`Error Matches snapshot 1`] = `
 <div>
   <div
-    class="error"
+    class="css-t3gb7b-Error"
     data-testid="error"
   >
     Что-то пошло не так. Пожалуйста, напишите нам на почту

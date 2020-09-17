@@ -15,6 +15,7 @@
     "deploy": "yarn build && yarn run copy-cname && yarn run link && gh-pages --dist build --branch gh-pages"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.35",
     "react": "^16.13.0",
     "react-collapse": "^5.0.1",
     "react-dom": "^16.5.2",

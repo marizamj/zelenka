@@ -3,10 +3,10 @@
 exports[`Video Matches snapshot 1`] = `
 <div>
   <div
-    class="video-container"
+    class="css-1xdu56b-Video"
   >
     <div
-      class="video"
+      class="css-fn2lyz"
     >
       <h2>
         test-video-title
@@ -14,7 +14,7 @@ exports[`Video Matches snapshot 1`] = `
       <iframe
         allow="autoplay; encrypted-media"
         allowfullscreen=""
-        class="iframe"
+        class="css-g1rpge"
         frameborder="0"
         src="test-video-url"
         title="test-video-title"
