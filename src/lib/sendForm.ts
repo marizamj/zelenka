@@ -1,11 +1,12 @@
+import config from "../config";
 import { FormData } from "../types";
 
-export default function(data: FormData) {
-  if (process.env.NODE_ENV === "development") {
+export default function (data: FormData) {
+  if (process.env.NODE_ENV === "test") {
     return Promise.resolve(new Response());
   }
 
-  return fetch("https://zelenka-back.now.sh/form", {
+  return fetch(config.zelenkaApi.baseUrl + "/form", {
     method: "POST",
     mode: "cors",
     body: JSON.stringify(data),
