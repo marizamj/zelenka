@@ -1,32 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.69e7b858.chunk.css",
-    "main.js": "/static/js/main.4eedbde9.chunk.js",
-    "main.js.map": "/static/js/main.4eedbde9.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.5ba7a74e.js",
-    "runtime-main.js.map": "/static/js/runtime-main.5ba7a74e.js.map",
-    "static/js/2.679dedc2.chunk.js": "/static/js/2.679dedc2.chunk.js",
-    "static/js/2.679dedc2.chunk.js.map": "/static/js/2.679dedc2.chunk.js.map",
+    "main.js": "/static/js/main.4261a276.chunk.js",
+    "main.js.map": "/static/js/main.4261a276.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.2b9c104c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.2b9c104c.js.map",
+    "static/js/2.f254f4aa.chunk.js": "/static/js/2.f254f4aa.chunk.js",
+    "static/js/2.f254f4aa.chunk.js.map": "/static/js/2.f254f4aa.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.72401b5170a397d9eec057767d30b49f.js": "/precache-manifest.72401b5170a397d9eec057767d30b49f.js",
+    "precache-manifest.5b7d053e185d18eeae3e3c605bdaa39b.js": "/precache-manifest.5b7d053e185d18eeae3e3c605bdaa39b.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.69e7b858.chunk.css.map": "/static/css/main.69e7b858.chunk.css.map",
-    "static/js/2.679dedc2.chunk.js.LICENSE.txt": "/static/js/2.679dedc2.chunk.js.LICENSE.txt",
+    "static/js/2.f254f4aa.chunk.js.LICENSE.txt": "/static/js/2.f254f4aa.chunk.js.LICENSE.txt",
     "static/media/btn-all.png": "/static/media/btn-all.82397f7e.png",
     "static/media/btn-partners.png": "/static/media/btn-partners.8fb55458.png",
     "static/media/facebook.png": "/static/media/facebook.d703c6bc.png",
     "static/media/logo-nlv.png": "/static/media/logo-nlv.cc5a1e66.png",
     "static/media/logo-pv.png": "/static/media/logo-pv.bfd8886b.png",
     "static/media/logo.png": "/static/media/logo.f4c0d88f.png",
-    "static/media/SocialMedia.css": "/static/media/sm-back.3de9b9c5.png",
+    "static/media/sm-back.png": "/static/media/sm-back.3de9b9c5.png",
     "static/media/thank-you.png": "/static/media/thank-you.5a1b5fb6.png",
-    "static/media/Header.css": "/static/media/top-bottle.5bc95b3c.png",
+    "static/media/top-bottle.png": "/static/media/top-bottle.5bc95b3c.png",
     "static/media/youtube.png": "/static/media/youtube.f5633224.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.5ba7a74e.js",
-    "static/js/2.679dedc2.chunk.js",
-    "static/css/main.69e7b858.chunk.css",
-    "static/js/main.4eedbde9.chunk.js"
+    "static/js/runtime-main.2b9c104c.js",
+    "static/js/2.f254f4aa.chunk.js",
+    "static/js/main.4261a276.chunk.js"
   ]
 }
