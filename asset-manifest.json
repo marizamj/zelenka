@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/static/js/main.4261a276.chunk.js",
-    "main.js.map": "/static/js/main.4261a276.chunk.js.map",
+    "main.js": "/static/js/main.2ded124e.chunk.js",
+    "main.js.map": "/static/js/main.2ded124e.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.2b9c104c.js",
     "runtime-main.js.map": "/static/js/runtime-main.2b9c104c.js.map",
     "static/js/2.f254f4aa.chunk.js": "/static/js/2.f254f4aa.chunk.js",
     "static/js/2.f254f4aa.chunk.js.map": "/static/js/2.f254f4aa.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.5b7d053e185d18eeae3e3c605bdaa39b.js": "/precache-manifest.5b7d053e185d18eeae3e3c605bdaa39b.js",
+    "precache-manifest.5defa18901296de883e377b0436dcb6d.js": "/precache-manifest.5defa18901296de883e377b0436dcb6d.js",
     "service-worker.js": "/service-worker.js",
     "static/js/2.f254f4aa.chunk.js.LICENSE.txt": "/static/js/2.f254f4aa.chunk.js.LICENSE.txt",
-    "static/media/btn-all.png": "/static/media/btn-all.82397f7e.png",
-    "static/media/btn-partners.png": "/static/media/btn-partners.8fb55458.png",
+    "static/media/btn-all.png": "/static/media/btn-all.fb29c82c.png",
+    "static/media/btn-partners.png": "/static/media/btn-partners.b1cd615a.png",
     "static/media/facebook.png": "/static/media/facebook.d703c6bc.png",
     "static/media/logo-nlv.png": "/static/media/logo-nlv.cc5a1e66.png",
     "static/media/logo-pv.png": "/static/media/logo-pv.bfd8886b.png",
@@ -24,6 +24,6 @@
   "entrypoints": [
     "static/js/runtime-main.2b9c104c.js",
     "static/js/2.f254f4aa.chunk.js",
-    "static/js/main.4261a276.chunk.js"
+    "static/js/main.2ded124e.chunk.js"
   ]
 }
