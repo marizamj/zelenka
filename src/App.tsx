@@ -7,6 +7,7 @@ import videos from "./lib/videos";
 
 import {
   Error,
+  Footer,
   Form,
   Header,
   Video,
@@ -22,7 +23,9 @@ import { FormType, FormData } from "./types";
 import { breakpoints } from "./lib/misc";
 
 const App = () => {
-  const buttons = useRef<HTMLDivElement>(null);
+  const buttonsContainer = useRef<HTMLDivElement>(null);
+  const btnPartnersRef = useRef<HTMLInputElement>(null);
+  const btnAllRef = useRef<HTMLInputElement>(null);
   const [state, setState] = useState({
     openForm: "partners" as FormType,
     error: false,
@@ -43,8 +46,8 @@ const App = () => {
   const handleSubmit = (data: FormData) => {
     updateState({ formIsSent: false, loading: true, error: false });
 
-    if (buttons.current && window) {
-      window.scrollTo({ top: buttons.current.offsetTop });
+    if (buttonsContainer.current && window) {
+      window.scrollTo({ top: buttonsContainer.current.offsetTop });
     }
 
     sendForm(data)
@@ -64,21 +67,29 @@ const App = () => {
       <Header />
       <SocialMedia />
 
-      <div ref={buttons} css={btnContainerStyle}>
+      <div ref={buttonsContainer} css={btnContainerStyle}>
         <input
+          ref={btnPartnersRef}
           type="image"
           alt="Партнерам"
           src={btnPartners}
           css={btnImgStyle(openForm === "partners")}
-          onClick={() => toggleForm("partners")}
+          onClick={() => {
+            toggleForm("partners");
+            btnPartnersRef.current?.blur();
+          }}
           data-testid="button-partners"
         />
         <input
+          ref={btnAllRef}
           type="image"
           alt="Всем"
           src={btnAll}
           css={btnImgStyle(openForm === "all")}
-          onClick={() => toggleForm("all")}
+          onClick={e => {
+            toggleForm("all");
+            btnAllRef.current?.blur();
+          }}
           data-testid="button-all"
         />
       </div>
@@ -98,13 +109,13 @@ const App = () => {
       </Collapse>
       <Video videos={videos} />
       <Partners />
+      <Footer />
     </div>
   );
 };
 
 const containerStyle = css`
   position: relative;
-  padding-bottom: 50px;
   text-align: center;
 `;
 

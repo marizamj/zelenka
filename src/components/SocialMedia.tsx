@@ -19,7 +19,6 @@ const SocialMedia = () => (
         alt="Перейти в Ютьюб"
         src={youtube}
         css={smBtnStyle}
-        style={{ marginRight: "13em" }}
       />
     </a>
     <a
@@ -46,11 +45,23 @@ const smStyle = css`
   background-size: contain;
   background-position: right;
   height: 250px;
+
+  a:first-of-type {
+    input {
+      margin-right: 13em;
+    }
+  }
   ${breakpoints.maxWidth1023} {
     font-size: 1.5em;
     height: 190px;
     margin-top: -20px;
     margin-left: 0;
+
+    a:first-of-type {
+      input {
+        margin-right: 11em;
+      }
+    }
   }
 `;
 
@@ -64,8 +75,11 @@ const smBtnStyle = css`
   &:hover {
     opacity: 0.8;
   }
+
   ${breakpoints.maxWidth1023} {
     top: 100px;
+    height: 4em;
+    margin-right: 6em;
   }
 `;
 

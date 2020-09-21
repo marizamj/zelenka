@@ -44,7 +44,7 @@ const partnersStyle = css`
 const partnerContainerStyle = css`
   position: relative;
   padding: 2em 2em 4em 2em;
-  margin-top: 2em;
+  margin-bottom: 2em;
   cursor: pointer;
 
   &:hover {

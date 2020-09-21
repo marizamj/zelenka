@@ -1,4 +1,5 @@
 export { default as Error } from "./Error";
+export { default as Footer } from "./Footer";
 export { default as Form } from "./Form";
 export { default as GlobalCSS } from "./GlobalCSS";
 export { default as Header } from "./Header";

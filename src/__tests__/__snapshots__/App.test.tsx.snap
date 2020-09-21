@@ -3,7 +3,7 @@
 exports[`App Matches snapshot 1`] = `
 <div>
   <div
-    class="css-1yjfgfj-App"
+    class="css-1tk0na8-App"
   >
     <header
       class="css-r270z7-Header"
@@ -27,7 +27,7 @@ exports[`App Matches snapshot 1`] = `
       </div>
     </header>
     <div
-      class="css-p9n527-SocialMedia"
+      class="css-qg4xf2-SocialMedia"
     >
       <a
         href="https://www.youtube.com/channel/UCIxnXifkJRTPOIe4AQM_fBQ"
@@ -37,9 +37,8 @@ exports[`App Matches snapshot 1`] = `
       >
         <input
           alt="Перейти в Ютьюб"
-          class="css-wzoma0-SocialMedia"
+          class="css-q5zy67-SocialMedia"
           src="youtube.png"
-          style="margin-right: 13em;"
           type="image"
         />
       </a>
@@ -51,7 +50,7 @@ exports[`App Matches snapshot 1`] = `
       >
         <input
           alt="Перейти в фейсбук"
-          class="css-wzoma0-SocialMedia"
+          class="css-q5zy67-SocialMedia"
           src="facebook.png"
           type="image"
         />
@@ -285,7 +284,7 @@ exports[`App Matches snapshot 1`] = `
         Уже работают с нами
       </h2>
       <div
-        class="css-1dbj4bu"
+        class="css-jdrnwe"
         role="link"
         tabindex="0"
       >
@@ -301,7 +300,7 @@ exports[`App Matches snapshot 1`] = `
         </span>
       </div>
       <div
-        class="css-1dbj4bu"
+        class="css-jdrnwe"
         role="link"
         tabindex="0"
       >
@@ -317,7 +316,7 @@ exports[`App Matches snapshot 1`] = `
         </span>
       </div>
       <div
-        class="css-1dbj4bu"
+        class="css-jdrnwe"
         role="link"
         tabindex="0"
       >
@@ -333,6 +332,20 @@ exports[`App Matches snapshot 1`] = `
         </span>
       </div>
     </div>
+    <footer
+      class="css-1u0gvdk-Footer"
+      data-testid="footer"
+    >
+      © 2018-
+      2020
+       zelenka.online
+       
+      <a
+        href="mailto:zelenkanasha@gmail.com"
+      >
+        zelenkanasha@gmail.com
+      </a>
+    </footer>
   </div>
 </div>
 `;

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Matches snapshot 1`] = `
+<div>
+  <footer
+    class="css-1u0gvdk-Footer"
+    data-testid="footer"
+  >
+    © 2018-
+    2020
+     zelenka.online
+     
+    <a
+      href="mailto:zelenkanasha@gmail.com"
+    >
+      zelenkanasha@gmail.com
+    </a>
+  </footer>
+</div>
+`;

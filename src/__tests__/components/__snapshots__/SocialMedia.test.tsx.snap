@@ -3,7 +3,7 @@
 exports[`SocialMedia Matches snapshot 1`] = `
 <div>
   <div
-    class="css-p9n527-SocialMedia"
+    class="css-qg4xf2-SocialMedia"
   >
     <a
       href="https://www.youtube.com/channel/UCIxnXifkJRTPOIe4AQM_fBQ"
@@ -13,9 +13,8 @@ exports[`SocialMedia Matches snapshot 1`] = `
     >
       <input
         alt="Перейти в Ютьюб"
-        class="css-wzoma0-SocialMedia"
+        class="css-q5zy67-SocialMedia"
         src="youtube.png"
-        style="margin-right: 13em;"
         type="image"
       />
     </a>
@@ -27,7 +26,7 @@ exports[`SocialMedia Matches snapshot 1`] = `
     >
       <input
         alt="Перейти в фейсбук"
-        class="css-wzoma0-SocialMedia"
+        class="css-q5zy67-SocialMedia"
         src="facebook.png"
         type="image"
       />

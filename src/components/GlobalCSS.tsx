@@ -24,9 +24,17 @@ const globalStyle = css`
     margin: 100px 0px 50px 0px;
   }
 
+  a {
+    color: #398a85;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   *:focus {
     outline: none;
-    box-shadow: 0 0 0 1px white, 0 0 0 4px #398a85;
+    box-shadow: 0 0 0 1px white, 0 0 0 4px #4ab4ad;
     border-radius: 2px;
     transition: box-shadow 0.2s ease;
   }
