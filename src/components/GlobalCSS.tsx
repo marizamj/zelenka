@@ -23,6 +23,13 @@ const globalStyle = css`
     color: #c92121;
     margin: 100px 0px 50px 0px;
   }
+
+  *:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px white, 0 0 0 4px #398a85;
+    border-radius: 2px;
+    transition: box-shadow 0.2s ease;
+  }
 `;
 
 export default GlobalCSS;

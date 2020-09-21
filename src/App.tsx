@@ -65,20 +65,20 @@ const App = () => {
       <SocialMedia />
 
       <div ref={buttons} css={btnContainerStyle}>
-        <img
-          src={btnPartners}
+        <input
+          type="image"
           alt="Партнерам"
+          src={btnPartners}
           css={btnImgStyle(openForm === "partners")}
           onClick={() => toggleForm("partners")}
-          role="button"
           data-testid="button-partners"
         />
-        <img
-          src={btnAll}
+        <input
+          type="image"
           alt="Всем"
+          src={btnAll}
           css={btnImgStyle(openForm === "all")}
           onClick={() => toggleForm("all")}
-          role="button"
           data-testid="button-all"
         />
       </div>

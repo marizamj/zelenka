@@ -8,24 +8,28 @@ exports[`SocialMedia Matches snapshot 1`] = `
     <a
       href="https://www.youtube.com/channel/UCIxnXifkJRTPOIe4AQM_fBQ"
       rel="noopener noreferrer"
+      tabindex="-1"
       target="_blank"
     >
-      <img
-        alt="YouTube"
-        class="css-qlvzh9-SocialMedia"
+      <input
+        alt="Перейти в Ютьюб"
+        class="css-wzoma0-SocialMedia"
         src="youtube.png"
-        style="margin-right: 5.5em;"
+        style="margin-right: 13em;"
+        type="image"
       />
     </a>
     <a
       href="https://www.facebook.com/3elenka.online/"
       rel="noopener noreferrer"
+      tabindex="-1"
       target="_blank"
     >
-      <img
-        alt="Facebook"
-        class="css-qlvzh9-SocialMedia"
+      <input
+        alt="Перейти в фейсбук"
+        class="css-wzoma0-SocialMedia"
         src="facebook.png"
+        type="image"
       />
     </a>
   </div>

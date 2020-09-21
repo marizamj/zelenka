@@ -32,43 +32,47 @@ exports[`App Matches snapshot 1`] = `
       <a
         href="https://www.youtube.com/channel/UCIxnXifkJRTPOIe4AQM_fBQ"
         rel="noopener noreferrer"
+        tabindex="-1"
         target="_blank"
       >
-        <img
-          alt="YouTube"
-          class="css-qlvzh9-SocialMedia"
+        <input
+          alt="Перейти в Ютьюб"
+          class="css-wzoma0-SocialMedia"
           src="youtube.png"
-          style="margin-right: 5.5em;"
+          style="margin-right: 13em;"
+          type="image"
         />
       </a>
       <a
         href="https://www.facebook.com/3elenka.online/"
         rel="noopener noreferrer"
+        tabindex="-1"
         target="_blank"
       >
-        <img
-          alt="Facebook"
-          class="css-qlvzh9-SocialMedia"
+        <input
+          alt="Перейти в фейсбук"
+          class="css-wzoma0-SocialMedia"
           src="facebook.png"
+          type="image"
         />
       </a>
     </div>
     <div
       class="css-k5lcjt-App"
     >
-      <img
+      <input
         alt="Партнерам"
         class="css-e9bp7j-App"
         data-testid="button-partners"
-        role="button"
         src="btn-partners.png"
+        type="image"
       />
-      <img
+      <input
         alt="Всем"
         class="css-1dk3h66-App"
         data-testid="button-all"
-        role="button"
         src="btn-all.png"
+        type="image"
       />
     </div>
     <div
@@ -281,64 +285,52 @@ exports[`App Matches snapshot 1`] = `
         Уже работают с нами
       </h2>
       <div
-        class="css-1h34w8k"
+        class="css-1dbj4bu"
+        role="link"
+        tabindex="0"
       >
+        <img
+          alt="Бар «Петров и  Васечка»"
+          class="css-g4hlvx"
+          src="logo-pv.png"
+        />
         <span
-          class="css-cz0j02"
+          class="css-1l82jpu"
         >
           Бар «Петров и  Васечка»
         </span>
-        <a
-          href="http://piv.pub/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <img
-            alt="Бар «Петров и  Васечка»"
-            class="css-g4hlvx"
-            src="logo-pv.png"
-          />
-        </a>
       </div>
       <div
-        class="css-1h34w8k"
+        class="css-1dbj4bu"
+        role="link"
+        tabindex="0"
       >
+        <img
+          alt="Клиника лазерной коррекции зрения «Новый взгляд»"
+          class="css-g4hlvx"
+          src="logo-nlv.png"
+        />
         <span
-          class="css-cz0j02"
+          class="css-1l82jpu"
         >
           Клиника лазерной коррекции зрения «Новый взгляд»
         </span>
-        <a
-          href="http://www.nlv.ru/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <img
-            alt="Клиника лазерной коррекции зрения «Новый взгляд»"
-            class="css-g4hlvx"
-            src="logo-nlv.png"
-          />
-        </a>
       </div>
       <div
-        class="css-1h34w8k"
+        class="css-1dbj4bu"
+        role="link"
+        tabindex="0"
       >
+        <img
+          alt="Материал «Афиша-Daily» о нас"
+          class="css-g4hlvx"
+          src="logo-afisha.png"
+        />
         <span
-          class="css-cz0j02"
+          class="css-1l82jpu"
         >
           Материал «Афиша-Daily» о нас
         </span>
-        <a
-          href="https://daily.afisha.ru/news/20920-vyshel-pervyy-vypusk-bloga-zelenka-tam-rasskazyvayut-o-hirurgii-tak-chtoby-ne-toshnilo/"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <img
-            alt="Материал «Афиша-Daily» о нас"
-            class="css-g4hlvx"
-            src="logo-afisha.png"
-          />
-        </a>
       </div>
     </div>
   </div>

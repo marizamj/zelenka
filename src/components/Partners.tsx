@@ -1,36 +1,26 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import { useState } from "react";
 import partners from "../lib/partners";
 import { reactKey, breakpoints } from "../lib/misc";
 
-const Partners = () => {
-  const [visibleName, setVisibleName] = useState("");
+const Partners = () => (
+  <div css={partnersStyle}>
+    <h2>Уже работают с нами</h2>
 
-  return (
-    <div css={partnersStyle}>
-      <h2>Уже работают с нами</h2>
-
-      {partners.map(({ id, title, url, img }) => (
-        <div
-          css={partnerContainerStyle}
-          key={reactKey({ id, title, url, img })}
-        >
-          <span css={partnerNameStyle(visibleName, id)}>{title}</span>
-          <a href={url} target="_blank" rel="noopener noreferrer">
-            <img
-              src={img}
-              alt={title}
-              css={partnerLogoStyle}
-              onMouseEnter={() => setVisibleName(id)}
-              onMouseLeave={() => setVisibleName("")}
-            />
-          </a>
-        </div>
-      ))}
-    </div>
-  );
-};
+    {partners.map(({ id, title, url, img }) => (
+      <div
+        css={partnerContainerStyle}
+        key={reactKey({ id, title, url, img })}
+        role="link"
+        onClick={() => window.open(url, "_blank")}
+        tabIndex={0}
+      >
+        <img src={img} alt={title} css={partnerLogoStyle} />
+        <span css={partnerNameStyle}>{title}</span>
+      </div>
+    ))}
+  </div>
+);
 
 const partnersStyle = css`
   text-align: center;
@@ -53,20 +43,24 @@ const partnersStyle = css`
 
 const partnerContainerStyle = css`
   position: relative;
-  padding: 4em 2em;
+  padding: 2em 2em 4em 2em;
+  margin-top: 2em;
+  cursor: pointer;
+
+  &:hover {
+    span {
+      text-decoration: underline;
+    }
+  }
 `;
 
-const partnerNameStyle = (visibleName: string, id: string) => css`
+const partnerNameStyle = css`
+  color: inherit;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
   font-size: 1em;
-  opacity: ${visibleName === id ? 1 : 0};
-  transition: opacity 0.2s ease;
-  ${breakpoints.maxWidth1023} {
-    opacity: 1;
-  }
 `;
 
 const partnerLogoStyle = css`

@@ -12,32 +12,28 @@ const SocialMedia = () => (
       href="https://www.youtube.com/channel/UCIxnXifkJRTPOIe4AQM_fBQ"
       target="_blank"
       rel="noopener noreferrer"
+      tabIndex={-1}
     >
-      <img
+      <input
+        type="image"
+        alt="Перейти в Ютьюб"
         src={youtube}
-        alt="YouTube"
         css={smBtnStyle}
-        style={{ marginRight: "5.5em" }}
+        style={{ marginRight: "13em" }}
       />
     </a>
-    {/* <a
-          href="https://www.youtube.com/channel/UCIxnXifkJRTPOIe4AQM_fBQ"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src={instagram}
-            alt="Instagram"
-            css={smBtnStyle}
-            style={{ marginRight: "12vw" }}
-          />
-        </a> */}
     <a
       href="https://www.facebook.com/3elenka.online/"
       target="_blank"
       rel="noopener noreferrer"
+      tabIndex={-1}
     >
-      <img src={facebook} alt="Facebook" css={smBtnStyle} />
+      <input
+        type="image"
+        alt="Перейти в фейсбук"
+        src={facebook}
+        css={smBtnStyle}
+      />
     </a>
   </div>
 );
@@ -59,11 +55,11 @@ const smStyle = css`
 `;
 
 const smBtnStyle = css`
-  height: 2em;
+  height: 5em;
   position: absolute;
   top: 130px;
   right: 0;
-  margin-right: 3em;
+  margin-right: 7em;
   cursor: pointer;
   &:hover {
     opacity: 0.8;

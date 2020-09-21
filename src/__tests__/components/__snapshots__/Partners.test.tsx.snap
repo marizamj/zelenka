@@ -9,64 +9,52 @@ exports[`Partners Matches snapshot 1`] = `
       Уже работают с нами
     </h2>
     <div
-      class="css-1h34w8k"
+      class="css-1dbj4bu"
+      role="link"
+      tabindex="0"
     >
+      <img
+        alt="Бар «Петров и  Васечка»"
+        class="css-g4hlvx"
+        src="logo-pv.png"
+      />
       <span
-        class="css-cz0j02"
+        class="css-1l82jpu"
       >
         Бар «Петров и  Васечка»
       </span>
-      <a
-        href="http://piv.pub/"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <img
-          alt="Бар «Петров и  Васечка»"
-          class="css-g4hlvx"
-          src="logo-pv.png"
-        />
-      </a>
     </div>
     <div
-      class="css-1h34w8k"
+      class="css-1dbj4bu"
+      role="link"
+      tabindex="0"
     >
+      <img
+        alt="Клиника лазерной коррекции зрения «Новый взгляд»"
+        class="css-g4hlvx"
+        src="logo-nlv.png"
+      />
       <span
-        class="css-cz0j02"
+        class="css-1l82jpu"
       >
         Клиника лазерной коррекции зрения «Новый взгляд»
       </span>
-      <a
-        href="http://www.nlv.ru/"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <img
-          alt="Клиника лазерной коррекции зрения «Новый взгляд»"
-          class="css-g4hlvx"
-          src="logo-nlv.png"
-        />
-      </a>
     </div>
     <div
-      class="css-1h34w8k"
+      class="css-1dbj4bu"
+      role="link"
+      tabindex="0"
     >
+      <img
+        alt="Материал «Афиша-Daily» о нас"
+        class="css-g4hlvx"
+        src="logo-afisha.png"
+      />
       <span
-        class="css-cz0j02"
+        class="css-1l82jpu"
       >
         Материал «Афиша-Daily» о нас
       </span>
-      <a
-        href="https://daily.afisha.ru/news/20920-vyshel-pervyy-vypusk-bloga-zelenka-tam-rasskazyvayut-o-hirurgii-tak-chtoby-ne-toshnilo/"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <img
-          alt="Материал «Афиша-Daily» о нас"
-          class="css-g4hlvx"
-          src="logo-afisha.png"
-        />
-      </a>
     </div>
   </div>
 </div>
