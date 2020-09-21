@@ -120,7 +120,10 @@ const btnImgStyle = (selected: boolean) => css`
   width: 200px;
   cursor: pointer;
   margin: 20px;
-  ${selected} // fix me
+  opacity: ${selected ? "1" : "0.5"};
+  &:hover {
+    opacity: ${selected ? "1" : "0.8"};
+  }
   ${breakpoints.maxWidth1023} {
     width: 140px;
     margin: 10px;

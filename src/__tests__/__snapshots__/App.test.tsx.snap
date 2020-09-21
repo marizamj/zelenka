@@ -58,14 +58,14 @@ exports[`App Matches snapshot 1`] = `
     >
       <img
         alt="Партнерам"
-        class="css-1wlp2ut-App"
+        class="css-e9bp7j-App"
         data-testid="button-partners"
         role="button"
         src="btn-partners.png"
       />
       <img
         alt="Всем"
-        class="css-1wlp2ut-App"
+        class="css-1dk3h66-App"
         data-testid="button-all"
         role="button"
         src="btn-all.png"
