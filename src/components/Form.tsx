@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import { useState } from "react";
+import { useState, FormEvent, useRef } from "react";
 import formFields from "../lib/formFields";
 import { breakpoints } from "../lib/misc";
 import { FormType, FormData, FormFull } from "../types";
@@ -12,10 +12,26 @@ interface Props {
 
 const Form = ({ type, handleSubmit }: Props) => {
   const [formState, setFormState] = useState<FormFull>({} as FormFull);
+  const [submitAttempted, setSubmitAttempted] = useState(false);
+  const errorMessage = useRef<HTMLParagraphElement>(null);
+
+  const preventDefaultInvalidField = (
+    e: FormEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => e.preventDefault();
+
+  const findFirstInvalidField = () =>
+    Array.from<HTMLInputElement | HTMLTextAreaElement>(
+      document.querySelectorAll("[id^=field][required]")
+    ).find(el => !el.value);
 
   return (
     <form
       css={formStyle}
+      onInvalid={e => {
+        setSubmitAttempted(true);
+        window.scrollTo({ top: errorMessage.current?.offsetTop });
+        findFirstInvalidField()?.focus();
+      }}
       onSubmit={e => {
         e.preventDefault();
         handleSubmit(formState);
@@ -23,10 +39,27 @@ const Form = ({ type, handleSubmit }: Props) => {
       data-testid={`form-${type}`}
     >
       <div css={formDescriptionStyle}>{formFields[type].description}</div>
-      <p css={requiredStyle}>* - обязательные поля</p>
+      <p css={requiredStyle} ref={errorMessage}>
+        * - обязательные поля
+      </p>
+      {submitAttempted && (
+        <p css={fillRequiredFieldsStyle}>
+          Пожалуйста, заполните все обязательные поля.
+        </p>
+      )}
       {formFields[type].fields.map(({ label, required, name, type }) => (
-        <label key={label} htmlFor={`field-${name}`}>
-          <p css={formLabelStyle}>
+        <label
+          css={[
+            formLabelStyle,
+            submitAttempted &&
+              required &&
+              !formState[name] &&
+              formLabelErrorStyle
+          ]}
+          key={label}
+          htmlFor={`field-${name}`}
+        >
+          <p>
             {label}
             {required && <span css={requiredStyle}>*</span>}
           </p>
@@ -35,6 +68,7 @@ const Form = ({ type, handleSubmit }: Props) => {
               onChange={({ target: { value, name } }) => {
                 setFormState({ ...formState, [name]: value });
               }}
+              onInvalid={preventDefaultInvalidField}
               required={required}
               name={name}
               id={`field-${name}`}
@@ -46,6 +80,7 @@ const Form = ({ type, handleSubmit }: Props) => {
               onChange={({ target: { value, name } }) => {
                 setFormState({ ...formState, [name]: value });
               }}
+              onInvalid={preventDefaultInvalidField}
               required={required}
               type={type || "text"}
               name={name}
@@ -115,16 +150,36 @@ const requiredStyle = css`
   margin-left: 0.1em;
 `;
 
+const fillRequiredFieldsStyle = css`
+  text-align: start;
+  font-size: 0.8em;
+  color: #c92121;
+`;
+
 const formDescriptionStyle = css`
   text-align: center;
 `;
 
 const formLabelStyle = css`
-  color: dimgrey;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
-  font-size: 0.8em;
-  text-align: start;
+  p {
+    color: dimgrey;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-size: 0.8em;
+    text-align: start;
+  }
+`;
+
+const formLabelErrorStyle = css`
+  p {
+    color: #c92121;
+  }
+  *:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px white, 0 0 0 4px #c92121;
+    border-radius: 2px;
+    transition: box-shadow 0.2s ease;
+  }
 `;
 
 export default Form;

@@ -96,11 +96,10 @@ exports[`App Matches snapshot 1`] = `
             * - обязательные поля
           </p>
           <label
+            class="css-tiq79h"
             for="field-name"
           >
-            <p
-              class="css-1xzd690"
-            >
+            <p>
               Как вас зовут?
               <span
                 class="css-430mmm"
@@ -118,11 +117,10 @@ exports[`App Matches snapshot 1`] = `
             />
           </label>
           <label
+            class="css-tiq79h"
             for="field-email"
           >
-            <p
-              class="css-1xzd690"
-            >
+            <p>
               Контактный e-mail
               <span
                 class="css-430mmm"
@@ -140,11 +138,10 @@ exports[`App Matches snapshot 1`] = `
             />
           </label>
           <label
+            class="css-tiq79h"
             for="field-phone"
           >
-            <p
-              class="css-1xzd690"
-            >
+            <p>
               Телефон
               <span
                 class="css-430mmm"
@@ -162,11 +159,10 @@ exports[`App Matches snapshot 1`] = `
             />
           </label>
           <label
+            class="css-tiq79h"
             for="field-workplace"
           >
-            <p
-              class="css-1xzd690"
-            >
+            <p>
               Где вы работаете? Не забудьте адрес сайта.
               <span
                 class="css-430mmm"
@@ -184,11 +180,10 @@ exports[`App Matches snapshot 1`] = `
             />
           </label>
           <label
+            class="css-tiq79h"
             for="field-message"
           >
-            <p
-              class="css-1xzd690"
-            >
+            <p>
               О чем вы хотели бы рассказать в Зелёнке?
               <span
                 class="css-430mmm"
@@ -204,11 +199,10 @@ exports[`App Matches snapshot 1`] = `
             />
           </label>
           <label
+            class="css-tiq79h"
             for="field-money"
           >
-            <p
-              class="css-1xzd690"
-            >
+            <p>
               Сколько денег вы готовы потратить на спонсорский выпуск?
             </p>
             <input
@@ -220,11 +214,10 @@ exports[`App Matches snapshot 1`] = `
             />
           </label>
           <label
+            class="css-tiq79h"
             for="field-startDate"
           >
-            <p
-              class="css-1xzd690"
-            >
+            <p>
               Когда хотите начать?
             </p>
             <input

@@ -17,11 +17,10 @@ exports[`Form Matches snapshot for all 1`] = `
       * - обязательные поля
     </p>
     <label
+      class="css-tiq79h"
       for="field-name"
     >
-      <p
-        class="css-1xzd690"
-      >
+      <p>
         Как вас зовут?
         <span
           class="css-430mmm"
@@ -39,11 +38,10 @@ exports[`Form Matches snapshot for all 1`] = `
       />
     </label>
     <label
+      class="css-tiq79h"
       for="field-email"
     >
-      <p
-        class="css-1xzd690"
-      >
+      <p>
         Контактный e-mail
         <span
           class="css-430mmm"
@@ -61,11 +59,10 @@ exports[`Form Matches snapshot for all 1`] = `
       />
     </label>
     <label
+      class="css-tiq79h"
       for="field-phone"
     >
-      <p
-        class="css-1xzd690"
-      >
+      <p>
         Телефон
         <span
           class="css-430mmm"
@@ -83,11 +80,10 @@ exports[`Form Matches snapshot for all 1`] = `
       />
     </label>
     <label
+      class="css-tiq79h"
       for="field-messageall"
     >
-      <p
-        class="css-1xzd690"
-      >
+      <p>
         Ваша идея/предложение
         <span
           class="css-430mmm"
@@ -103,11 +99,10 @@ exports[`Form Matches snapshot for all 1`] = `
       />
     </label>
     <label
+      class="css-tiq79h"
       for="field-compliments"
     >
-      <p
-        class="css-1xzd690"
-      >
+      <p>
         Чем вам нравится Зелёнка?
       </p>
       <textarea
@@ -117,11 +112,10 @@ exports[`Form Matches snapshot for all 1`] = `
       />
     </label>
     <label
+      class="css-tiq79h"
       for="field-recommendations"
     >
-      <p
-        class="css-1xzd690"
-      >
+      <p>
         Что нам необходимо улучшить в своей работе?
       </p>
       <textarea
@@ -156,11 +150,10 @@ exports[`Form Matches snapshot for partners 1`] = `
       * - обязательные поля
     </p>
     <label
+      class="css-tiq79h"
       for="field-name"
     >
-      <p
-        class="css-1xzd690"
-      >
+      <p>
         Как вас зовут?
         <span
           class="css-430mmm"
@@ -178,11 +171,10 @@ exports[`Form Matches snapshot for partners 1`] = `
       />
     </label>
     <label
+      class="css-tiq79h"
       for="field-email"
     >
-      <p
-        class="css-1xzd690"
-      >
+      <p>
         Контактный e-mail
         <span
           class="css-430mmm"
@@ -200,11 +192,10 @@ exports[`Form Matches snapshot for partners 1`] = `
       />
     </label>
     <label
+      class="css-tiq79h"
       for="field-phone"
     >
-      <p
-        class="css-1xzd690"
-      >
+      <p>
         Телефон
         <span
           class="css-430mmm"
@@ -222,11 +213,10 @@ exports[`Form Matches snapshot for partners 1`] = `
       />
     </label>
     <label
+      class="css-tiq79h"
       for="field-workplace"
     >
-      <p
-        class="css-1xzd690"
-      >
+      <p>
         Где вы работаете? Не забудьте адрес сайта.
         <span
           class="css-430mmm"
@@ -244,11 +234,10 @@ exports[`Form Matches snapshot for partners 1`] = `
       />
     </label>
     <label
+      class="css-tiq79h"
       for="field-message"
     >
-      <p
-        class="css-1xzd690"
-      >
+      <p>
         О чем вы хотели бы рассказать в Зелёнке?
         <span
           class="css-430mmm"
@@ -264,11 +253,10 @@ exports[`Form Matches snapshot for partners 1`] = `
       />
     </label>
     <label
+      class="css-tiq79h"
       for="field-money"
     >
-      <p
-        class="css-1xzd690"
-      >
+      <p>
         Сколько денег вы готовы потратить на спонсорский выпуск?
       </p>
       <input
@@ -280,11 +268,10 @@ exports[`Form Matches snapshot for partners 1`] = `
       />
     </label>
     <label
+      class="css-tiq79h"
       for="field-startDate"
     >
-      <p
-        class="css-1xzd690"
-      >
+      <p>
         Когда хотите начать?
       </p>
       <input
